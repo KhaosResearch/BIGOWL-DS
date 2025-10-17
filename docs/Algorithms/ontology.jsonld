@@ -1,0 +1,264 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"
+  } ]
+}, {
+  "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm"
+  } ]
+}, {
+  "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-07-14T09:00:00"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Khaos Research"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "This ontology covers all possible kinds. It has two main subclasses: DataMiningAlgorithm and OptimizationAlgorithm, which are used to distinguish between these two families of algorithms. The former is included in the form of equivalence with the class DM-Algorithm, which is linked from DMOP."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "https://opensource.org/licenses/MIT"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2025-10-16T13:00:00"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "Khaos Research"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@value" : "(c) Khaos Research"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "BIGOWLAlgorithms"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "BIGOWLAlgorithms"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/BIGOWLAlgorithms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BIGOWLAlgorithms Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Covers algorithms used to solve Problems"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DTC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DTCPredict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DTCTesting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/KNN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/KNNPredict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/KNNTesting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/RF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/RFPredict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/RFTesting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/SVM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/SVMPredict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/SVMTesting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLAlgorithms/solves",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/BIGOWLAlgorithms/Algorithm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/BIGOWLProblems/Problem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/BIGOWLProblems/Problem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

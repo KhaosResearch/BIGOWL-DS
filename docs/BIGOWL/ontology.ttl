@@ -1,0 +1,985 @@
+@prefix : <https://w3id.org/BIGOWL#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/BIGOWL#> .
+
+<https://w3id.org/BIGOWL> rdf:type owl:Ontology ;
+                           owl:versionIRI <https://w3id.org/BIGOWL> ;
+                           owl:imports <https://w3id.org/BIGOWLAlgorithms> ,
+                                       <https://w3id.org/BIGOWLData> ,
+                                       <https://w3id.org/BIGOWLProblems> ,
+                                       <https://w3id.org/BIGOWLWorkflows> ;
+                           <http://purl.org/dc/terms/created> "2022-07-14T09:00:00"^^xsd:dateTime ;
+                           <http://purl.org/dc/terms/creator> "Khaos Research" ;
+                           <http://purl.org/dc/terms/description> "BIGOWL (BIG data analytics OWL2 ontology) acts as a formal schema for representing and consolidating knowledge in Big Data analytics. Knowledge incorporation is, in turn, beneficial for efficient algorithmic performance by taking part in the operator’s design, parameter selection, and human interactive and decision-making strategies." ;
+                           <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^rdfs:Literal ;
+                           <http://purl.org/dc/terms/modified> "2025-10-16T14:00:00"^^xsd:dateTime ;
+                           <http://purl.org/dc/terms/publisher> "Khaos Research" ;
+                           <http://purl.org/dc/terms/rights> "(c) Khaos Research" ;
+                           <http://purl.org/dc/terms/title> "BIGOWL" ;
+                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "BIGOWL" ;
+                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/BIGOWL" ;
+                           rdfs:label "BIGOWL Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/BIGOWLAlgorithms/solves
+<https://w3id.org/BIGOWLAlgorithms/solves> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/BIGOWLAlgorithms/Algorithm> ;
+                                           rdfs:range <https://w3id.org/BIGOWLProblems/Problem> .
+
+
+###  https://w3id.org/BIGOWLData/hasCellInColumn
+<https://w3id.org/BIGOWLData/hasCellInColumn> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://w3id.org/BIGOWLData/Column> ;
+                                              rdfs:range <https://w3id.org/BIGOWLData/Cell> .
+
+
+###  https://w3id.org/BIGOWLData/hasCellInRow
+<https://w3id.org/BIGOWLData/hasCellInRow> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/BIGOWLData/Row> ;
+                                           rdfs:range <https://w3id.org/BIGOWLData/Cell> .
+
+
+###  https://w3id.org/BIGOWLData/hasColumn
+<https://w3id.org/BIGOWLData/hasColumn> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                        rdfs:range <https://w3id.org/BIGOWLData/Column> .
+
+
+###  https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn
+<https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://w3id.org/BIGOWLData/Column> ;
+                                                         rdfs:range <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/hasRow
+<https://w3id.org/BIGOWLData/hasRow> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                     rdfs:range <https://w3id.org/BIGOWLData/Row> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/connectedTo
+<https://w3id.org/BIGOWLWorkflows/connectedTo> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/BIGOWLWorkflows/Task> ;
+                                               rdfs:range <https://w3id.org/BIGOWLWorkflows/Task> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/correspondsToTemplate
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> ;
+                                                         rdfs:range <http://www.opmw.org/ontology/WorkflowTemplate> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasAlgorithm
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/BIGOWLWorkflows/Component> ;
+                                                rdfs:range <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasChannelOutput
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://w3id.org/BIGOWLWorkflows/Task> ;
+                                                    rdfs:range <https://w3id.org/BIGOWLWorkflows/Channel> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasComponent
+<https://w3id.org/BIGOWLWorkflows/hasComponent> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/BIGOWLWorkflows/Task> ;
+                                                rdfs:range <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasDataType
+<https://w3id.org/BIGOWLWorkflows/hasDataType> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                               rdfs:range <https://w3id.org/BIGOWLData/DataType> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasImplementation
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/BIGOWLWorkflows/Component> ;
+                                                     rdfs:range <https://w3id.org/BIGOWLWorkflows/Implementation> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasParameter
+<https://w3id.org/BIGOWLWorkflows/hasParameter> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <https://w3id.org/BIGOWLWorkflows/Component>
+                                                                            <https://w3id.org/BIGOWLWorkflows/Task>
+                                                                          )
+                                                            ] ;
+                                                rdfs:range <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasTask
+<https://w3id.org/BIGOWLWorkflows/hasTask> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> ;
+                                           rdfs:range <https://w3id.org/BIGOWLWorkflows/Task> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/instanceParameterOf
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                                       rdfs:range <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/isAVersionOf
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/BIGOWLWorkflows/Component> ;
+                                                rdfs:range <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/specifiesInputClass
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain [ rdf:type owl:Class ;
+                                                                     owl:unionOf ( <https://w3id.org/BIGOWLWorkflows/Component>
+                                                                                   <https://w3id.org/BIGOWLWorkflows/Task>
+                                                                                 )
+                                                                   ] ;
+                                                       rdfs:range <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/specifiesOutputClass
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain [ rdf:type owl:Class ;
+                                                                      owl:unionOf ( <https://w3id.org/BIGOWLWorkflows/Component>
+                                                                                    <https://w3id.org/BIGOWLWorkflows/Task>
+                                                                                  )
+                                                                    ] ;
+                                                        rdfs:range <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/wasLaunchedBy
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> ;
+                                                 rdfs:range <http://purl.org/net/opmv/ns#Agent> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/BIGOWLData/algorithm
+<https://w3id.org/BIGOWLData/algorithm> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                        rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/commentChar
+<https://w3id.org/BIGOWLData/commentChar> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                          rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/delimiter
+<https://w3id.org/BIGOWLData/delimiter> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                        rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/doubleQuote
+<https://w3id.org/BIGOWLData/doubleQuote> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                          rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/encoding
+<https://w3id.org/BIGOWLData/encoding> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                       rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/escapeChar
+<https://w3id.org/BIGOWLData/escapeChar> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/fileFormat
+<https://w3id.org/BIGOWLData/fileFormat> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/BIGOWLData/Data> ;
+                                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/hasColumnName
+<https://w3id.org/BIGOWLData/hasColumnName> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <https://w3id.org/BIGOWLData/Column> ;
+                                            rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/hasColumnPosition
+<https://w3id.org/BIGOWLData/hasColumnPosition> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://w3id.org/BIGOWLData/Cell> ;
+                                                rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/hasHeader
+<https://w3id.org/BIGOWLData/hasHeader> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                        rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLData/hasPosition
+<https://w3id.org/BIGOWLData/hasPosition> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/BIGOWLData/Column> ;
+                                          rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/hasRowPosition
+<https://w3id.org/BIGOWLData/hasRowPosition> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://w3id.org/BIGOWLData/Cell> ;
+                                             rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/isLabel
+<https://w3id.org/BIGOWLData/isLabel> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/BIGOWLData/Column> ;
+                                      rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLData/label
+<https://w3id.org/BIGOWLData/label> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                    rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/leaf_size
+<https://w3id.org/BIGOWLData/leaf_size> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                        rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/lineDelimiter
+<https://w3id.org/BIGOWLData/lineDelimiter> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                            rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/mapping
+<https://w3id.org/BIGOWLData/mapping> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                      rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/metric
+<https://w3id.org/BIGOWLData/metric> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                     rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/metric_params
+<https://w3id.org/BIGOWLData/metric_params> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                            rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/n_jobs
+<https://w3id.org/BIGOWLData/n_jobs> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                     rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/n_neighbors
+<https://w3id.org/BIGOWLData/n_neighbors> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                          rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/numberOfColumns
+<https://w3id.org/BIGOWLData/numberOfColumns> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                              rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/numberOfLines
+<https://w3id.org/BIGOWLData/numberOfLines> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                            rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/p
+<https://w3id.org/BIGOWLData/p> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/pathTabularDataSet
+<https://w3id.org/BIGOWLData/pathTabularDataSet> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/quoteChar
+<https://w3id.org/BIGOWLData/quoteChar> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                        rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/quoting
+<https://w3id.org/BIGOWLData/quoting> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                      rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/represents
+<https://w3id.org/BIGOWLData/represents> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain owl:Thing ;
+                                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/resource
+<https://w3id.org/BIGOWLData/resource> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                       rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLData/skipInitialSpace
+<https://w3id.org/BIGOWLData/skipInitialSpace> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                               rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLData/skiprows
+<https://w3id.org/BIGOWLData/skiprows> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                       rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLData/strict
+<https://w3id.org/BIGOWLData/strict> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <https://w3id.org/BIGOWLData/TabularDataSet> ;
+                                     rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLData/weights
+<https://w3id.org/BIGOWLData/weights> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> ;
+                                      rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLProblems/hasFeature
+<https://w3id.org/BIGOWLProblems/hasFeature> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://w3id.org/BIGOWLProblems/Problem> ;
+                                             rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/className
+<https://w3id.org/BIGOWLWorkflows/className> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://w3id.org/BIGOWLWorkflows/Implementation> ;
+                                             rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/classNameSerialized
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://w3id.org/BIGOWLWorkflows/Channel> ;
+                                                       rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/endedAt
+<https://w3id.org/BIGOWLWorkflows/endedAt> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <https://w3id.org/BIGOWLWorkflows/Task> ;
+                                           rdfs:range [ rdf:type rdfs:Datatype ;
+                                                        owl:unionOf ( xsd:dateTime
+                                                                      xsd:string
+                                                                    )
+                                                      ] ;
+                                           rdfs:comment """The time at which an activity ended. See also prov:startedAtTime.
+http://www.w3.org/ns/prov#endedAtTime""" .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasDataValue
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                                rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasDefaultValue
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasDocumentation
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.opmw.org/ontology/WorkflowTemplate> ;
+                                                    rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                 owl:unionOf ( xsd:anyURI
+                                                                               xsd:string
+                                                                             )
+                                                               ] ;
+                                                    rdfs:comment """Property that binds a workflow template to its documentation.
+
+http://www.opmw.org/ontology/hasDocumentation""" .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasListValue
+<https://w3id.org/BIGOWLWorkflows/hasListValue> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                                rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/hasName
+<https://w3id.org/BIGOWLWorkflows/hasName> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain owl:Thing ;
+                                           rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/implementationLanguage
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <https://w3id.org/BIGOWLWorkflows/Implementation> ;
+                                                          rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> ;
+                                                     rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLWorkflows/isObligatory
+<https://w3id.org/BIGOWLWorkflows/isObligatory> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                                rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLWorkflows/module
+<https://w3id.org/BIGOWLWorkflows/module> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/BIGOWLWorkflows/Implementation> ;
+                                          rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/numTask
+<https://w3id.org/BIGOWLWorkflows/numTask> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> ;
+                                           rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLWorkflows/numberOfInputs
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <https://w3id.org/BIGOWLWorkflows/Component>
+                                                                              <https://w3id.org/BIGOWLWorkflows/Task>
+                                                                            )
+                                                              ] ;
+                                                  rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLWorkflows/numberOfOutputs
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <https://w3id.org/BIGOWLWorkflows/Component>
+                                                                               <https://w3id.org/BIGOWLWorkflows/Task>
+                                                                             )
+                                                               ] ;
+                                                   rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLWorkflows/order
+<https://w3id.org/BIGOWLWorkflows/order> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/BIGOWLWorkflows/Task> ;
+                                         rdfs:range xsd:int .
+
+
+###  https://w3id.org/BIGOWLWorkflows/private
+<https://w3id.org/BIGOWLWorkflows/private> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                           rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/BIGOWLWorkflows/range
+<https://w3id.org/BIGOWLWorkflows/range> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> ;
+                                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/startedAt
+<https://w3id.org/BIGOWLWorkflows/startedAt> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://w3id.org/BIGOWLWorkflows/Task> ;
+                                             rdfs:range [ rdf:type rdfs:Datatype ;
+                                                          owl:unionOf ( xsd:dateTime
+                                                                        xsd:string
+                                                                      )
+                                                        ] ;
+                                             rdfs:comment """The time at which an activity started. See also prov:endedAtTime.
+
+http://www.w3.org/ns/prov#startedAtTime""" .
+
+
+###  https://w3id.org/BIGOWLWorkflows/version
+<https://w3id.org/BIGOWLWorkflows/version> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <https://w3id.org/BIGOWLWorkflows/Component>
+                                                                       <https://w3id.org/BIGOWLWorkflows/Implementation>
+                                                                     )
+                                                       ] ;
+                                           rdfs:range xsd:string .
+
+
+###  https://w3id.org/BIGOWLWorkflows/workflow
+<https://w3id.org/BIGOWLWorkflows/workflow> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <https://w3id.org/BIGOWLWorkflows/Component> ;
+                                            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/net/opmv/ns#Agent
+<http://purl.org/net/opmv/ns#Agent> rdf:type owl:Class .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model> rdf:type owl:Class .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://w3id.org/BIGOWLData/Text> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> rdf:type owl:Class .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model> .
+
+
+###  http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> rdf:type owl:Class .
+
+
+###  http://www.opmw.org/ontology/WorkflowTemplate
+<http://www.opmw.org/ontology/WorkflowTemplate> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/Algorithm
+<https://w3id.org/BIGOWLAlgorithms/Algorithm> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DTC
+<https://w3id.org/BIGOWLAlgorithms/DTC> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DTCPredict
+<https://w3id.org/BIGOWLAlgorithms/DTCPredict> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DTCTesting
+<https://w3id.org/BIGOWLAlgorithms/DTCTesting> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/KNN
+<https://w3id.org/BIGOWLAlgorithms/KNN> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/KNNPredict
+<https://w3id.org/BIGOWLAlgorithms/KNNPredict> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/KNNTesting
+<https://w3id.org/BIGOWLAlgorithms/KNNTesting> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/RF
+<https://w3id.org/BIGOWLAlgorithms/RF> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/RFPredict
+<https://w3id.org/BIGOWLAlgorithms/RFPredict> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/RFTesting
+<https://w3id.org/BIGOWLAlgorithms/RFTesting> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/SVM
+<https://w3id.org/BIGOWLAlgorithms/SVM> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/SVMPredict
+<https://w3id.org/BIGOWLAlgorithms/SVMPredict> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/SVMTesting
+<https://w3id.org/BIGOWLAlgorithms/SVMTesting> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> .
+
+
+###  https://w3id.org/BIGOWLData/Bin
+<https://w3id.org/BIGOWLData/Bin> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/Cell
+<https://w3id.org/BIGOWLData/Cell> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLData/ClassificationMetric
+<https://w3id.org/BIGOWLData/ClassificationMetric> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/BIGOWLData/TabularDataSet> .
+
+
+###  https://w3id.org/BIGOWLData/Column
+<https://w3id.org/BIGOWLData/Column> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLData/Data
+<https://w3id.org/BIGOWLData/Data> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLData/DataType
+<https://w3id.org/BIGOWLData/DataType> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLData/Fastq
+<https://w3id.org/BIGOWLData/Fastq> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/HTML
+<https://w3id.org/BIGOWLData/HTML> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/BIGOWLData/Text> .
+
+
+###  https://w3id.org/BIGOWLData/Image
+<https://w3id.org/BIGOWLData/Image> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/Json
+<https://w3id.org/BIGOWLData/Json> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/BIGOWLData/Text> .
+
+
+###  https://w3id.org/BIGOWLData/Map
+<https://w3id.org/BIGOWLData/Map> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/Pdf
+<https://w3id.org/BIGOWLData/Pdf> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/PrimitiveType
+<https://w3id.org/BIGOWLData/PrimitiveType> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/BIGOWLData/DataType> .
+
+
+###  https://w3id.org/BIGOWLData/RDF
+<https://w3id.org/BIGOWLData/RDF> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/BIGOWLData/Text> .
+
+
+###  https://w3id.org/BIGOWLData/Rar
+<https://w3id.org/BIGOWLData/Rar> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/Row
+<https://w3id.org/BIGOWLData/Row> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLData/StructuredType
+<https://w3id.org/BIGOWLData/StructuredType> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/BIGOWLData/DataType> .
+
+
+###  https://w3id.org/BIGOWLData/TabularDataSet
+<https://w3id.org/BIGOWLData/TabularDataSet> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass> .
+
+
+###  https://w3id.org/BIGOWLData/TempFile
+<https://w3id.org/BIGOWLData/TempFile> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/Text
+<https://w3id.org/BIGOWLData/Text> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLData/Zip
+<https://w3id.org/BIGOWLData/Zip> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/BIGOWLData/Data> .
+
+
+###  https://w3id.org/BIGOWLProblems/Problem
+<https://w3id.org/BIGOWLProblems/Problem> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLWorkflows/Channel
+<https://w3id.org/BIGOWLWorkflows/Channel> rdf:type owl:Class ;
+                                           rdfs:comment "Represents a topic when a workflow is executed, this class is used for annotating the process of execution" .
+
+
+###  https://w3id.org/BIGOWLWorkflows/Component
+<https://w3id.org/BIGOWLWorkflows/Component> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataAnalysing
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataCollection
+<https://w3id.org/BIGOWLWorkflows/DataCollection> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataFlow
+<https://w3id.org/BIGOWLWorkflows/DataFlow> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataIngestion
+<https://w3id.org/BIGOWLWorkflows/DataIngestion> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/DataCollection> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataMining
+<https://w3id.org/BIGOWLWorkflows/DataMining> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/MachineLearning> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataProcessing
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataSink
+<https://w3id.org/BIGOWLWorkflows/DataSink> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/Component> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/DataTransform
+<https://w3id.org/BIGOWLWorkflows/DataTransform> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/Implementation
+<https://w3id.org/BIGOWLWorkflows/Implementation> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLWorkflows/MachineLearning
+<https://w3id.org/BIGOWLWorkflows/MachineLearning> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/DataAnalysing> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/RemoveOutlier
+<https://w3id.org/BIGOWLWorkflows/RemoveOutlier> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/Split
+<https://w3id.org/BIGOWLWorkflows/Split> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/SplitShuffle
+<https://w3id.org/BIGOWLWorkflows/SplitShuffle> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/Split> .
+
+
+###  https://w3id.org/BIGOWLWorkflows/Task
+<https://w3id.org/BIGOWLWorkflows/Task> rdf:type owl:Class .
+
+
+###  https://w3id.org/BIGOWLWorkflows/WebService
+<https://w3id.org/BIGOWLWorkflows/WebService> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/BIGOWLData/Boolean
+<https://w3id.org/BIGOWLData/Boolean> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/Date
+<https://w3id.org/BIGOWLData/Date> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/Double
+<https://w3id.org/BIGOWLData/Double> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/File
+<https://w3id.org/BIGOWLData/File> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/BIGOWLData/StructuredType> .
+
+
+###  https://w3id.org/BIGOWLData/Float
+<https://w3id.org/BIGOWLData/Float> rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/Folder
+<https://w3id.org/BIGOWLData/Folder> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/BIGOWLData/StructuredType> .
+
+
+###  https://w3id.org/BIGOWLData/InputColumn
+<https://w3id.org/BIGOWLData/InputColumn> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/BIGOWLData/StructuredType> .
+
+
+###  https://w3id.org/BIGOWLData/Integer
+<https://w3id.org/BIGOWLData/Integer> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/List
+<https://w3id.org/BIGOWLData/List> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/BIGOWLData/StructuredType> .
+
+
+###  https://w3id.org/BIGOWLData/String
+<https://w3id.org/BIGOWLData/String> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  https://w3id.org/BIGOWLData/Timestamp
+<https://w3id.org/BIGOWLData/Timestamp> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/BIGOWLData/PrimitiveType> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

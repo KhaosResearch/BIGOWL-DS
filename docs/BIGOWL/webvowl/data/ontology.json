@@ -1,0 +1,3304 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "https://w3id.org/BIGOWLData", "https://w3id.org/BIGOWLAlgorithms", "https://w3id.org/BIGOWLWorkflows", "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/net/opmv/ns", "http://www.w3.org/2001/XMLSchema", "http://www.opmw.org/ontology", "https://w3id.org/BIGOWLProblems" ],
+    "title" : {
+      "undefined" : "BIGOWL"
+    },
+    "iri" : "https://w3id.org/BIGOWL",
+    "author" : [ "Khaos Research" ],
+    "description" : {
+      "undefined" : "BIGOWL (BIG data analytics OWL2 ontology) acts as a formal schema for representing and consolidating knowledge in Big Data analytics. Knowledge incorporation is, in turn, beneficial for efficient algorithmic performance by taking part in the operator’s design, parameter selection, and human interactive and decision-making strategies."
+    },
+    "labels" : {
+      "undefined" : "BIGOWL Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Khaos Research",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2022-07-14T09:00:00",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "BIGOWL",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "(c) Khaos Research",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "Khaos Research",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-10-16T14:00:00",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/BIGOWL",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "BIGOWL",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "136",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "144",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "owl:Class"
+  }, {
+    "id" : "149",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "152",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "155",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "161",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "169",
+    "type" : "owl:Class"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "203",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "132",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "183",
+    "type" : "owl:Class"
+  }, {
+    "id" : "206",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "197",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "171",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "184",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "173",
+    "type" : "owl:Class"
+  }, {
+    "id" : "172",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "243",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "242",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "164",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "257",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "218",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "182",
+    "type" : "owl:Class"
+  }, {
+    "id" : "220",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "259",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "195",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataFlow",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataFlow"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/Channel",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Channel"
+    },
+    "comment" : {
+      "undefined" : "Represents a topic when a workflow is executed, this class is used for annotating the process of execution"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/MachineLearning",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MachineLearning"
+    },
+    "subClasses" : [ "57" ],
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/Task",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Bin",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bin"
+    },
+    "attributes" : [ "external" ],
+    "id" : "71",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://purl.org/net/opmv/ns#Agent",
+    "baseIri" : "http://purl.org/net/opmv/ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DTC",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DTC"
+    },
+    "attributes" : [ "external" ],
+    "id" : "80",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WebServiceAlgorithm"
+    },
+    "attributes" : [ "external" ],
+    "id" : "81",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PredictingAlgorithm"
+    },
+    "subClasses" : [ "50" ],
+    "attributes" : [ "external" ],
+    "id" : "86",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/KNNPredict",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KNNPredict"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Pdf",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Pdf"
+    },
+    "attributes" : [ "external" ],
+    "id" : "89",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataProcessingAlgorithm"
+    },
+    "subClasses" : [ "81" ],
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Text",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Text"
+    },
+    "subClasses" : [ "106", "107", "108", "109" ],
+    "attributes" : [ "external" ],
+    "id" : "105",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Image",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Image"
+    },
+    "attributes" : [ "external" ],
+    "id" : "110",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConvNetLSTMTesting"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/SVMPredict",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SVMPredict"
+    },
+    "attributes" : [ "external" ],
+    "id" : "49",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/TempFile",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TempFile"
+    },
+    "attributes" : [ "external" ],
+    "id" : "121",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataIngestion",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataIngestion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "130",
+    "superClasses" : [ "91" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestingAlgorithm"
+    },
+    "subClasses" : [ "2" ],
+    "attributes" : [ "external" ],
+    "id" : "136",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/RemoveOutlier",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RemoveOutlier"
+    },
+    "attributes" : [ "external" ],
+    "id" : "95",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/SVMTesting",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SVMTesting"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationModel"
+    },
+    "subClasses" : [ "146", "147" ],
+    "attributes" : [ "external" ],
+    "id" : "144",
+    "superClasses" : [ "145" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/RF",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RF"
+    },
+    "attributes" : [ "external" ],
+    "id" : "148",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/SVM",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SVM"
+    },
+    "attributes" : [ "external" ],
+    "id" : "149",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataCollection",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataCollection"
+    },
+    "subClasses" : [ "130" ],
+    "attributes" : [ "external" ],
+    "id" : "91",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiscriminativeModel"
+    },
+    "subClasses" : [ "32" ],
+    "attributes" : [ "external" ],
+    "id" : "147",
+    "superClasses" : [ "144" ]
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DM-Model"
+    },
+    "subClasses" : [ "145" ],
+    "attributes" : [ "external" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/RDF",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RDF"
+    },
+    "attributes" : [ "external" ],
+    "id" : "109",
+    "superClasses" : [ "105" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Rar",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rar"
+    },
+    "attributes" : [ "external" ],
+    "id" : "155",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/ClassificationMetric",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationMetric"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/Implementation",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Implementation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLProblems/Problem",
+    "baseIri" : "https://w3id.org/BIGOWLProblems",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Problem"
+    },
+    "attributes" : [ "external" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PredictiveModel"
+    },
+    "subClasses" : [ "144" ],
+    "attributes" : [ "external" ],
+    "id" : "145",
+    "superClasses" : [ "152" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/StructuredType",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuredType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/BIGOWLData/Folder",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Folder"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/File",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "File"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/InputColumn",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "InputColumn"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/List",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "List"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "68",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Column",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Column"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/WebService",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WebService"
+    },
+    "attributes" : [ "external" ],
+    "id" : "46",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationModelingAlgorithm"
+    },
+    "subClasses" : [ "149", "172", "173", "80", "148" ],
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/KNNTesting",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KNNTesting"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Row",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Row"
+    },
+    "attributes" : [ "external" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "142",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "140",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataAnalysing",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataAnalysing"
+    },
+    "subClasses" : [ "55" ],
+    "attributes" : [ "external" ],
+    "id" : "56",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "179",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "180",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "112",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Data",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data"
+    },
+    "subClasses" : [ "182", "183", "184", "105", "71", "110", "155", "89", "121" ],
+    "attributes" : [ "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConvNetLSTMPredict"
+    },
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataMining",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataMining"
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "192",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiscriminantFunctionModel"
+    },
+    "subClasses" : [ "195" ],
+    "attributes" : [ "external" ],
+    "id" : "146",
+    "superClasses" : [ "144" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/PrimitiveType",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrimitiveType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/BIGOWLData/Date",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Date"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/Timestamp",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Timestamp"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/Float",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Float"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/Integer",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Integer"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/Double",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Double"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/Boolean",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "Boolean"
+      }
+    }, {
+      "iri" : "https://w3id.org/BIGOWLData/String",
+      "baseIri" : "https://w3id.org/BIGOWLData",
+      "labels" : {
+        "IRI-based" : "String"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "65",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataAnalysingAlgorithm"
+    },
+    "subClasses" : [ "87" ],
+    "attributes" : [ "external" ],
+    "id" : "169",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "191",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "198",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "200",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "159",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "201",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "203"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataCollectionAlgorithm"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "204",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "205",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/HTML",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HTML"
+    },
+    "attributes" : [ "external" ],
+    "id" : "106",
+    "superClasses" : [ "105" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/Component",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Component"
+    },
+    "subClasses" : [ "47", "206", "21", "56", "91" ],
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DTCTesting",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DTCTesting"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataProcessing",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataProcessing"
+    },
+    "subClasses" : [ "13", "93", "95", "46" ],
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.opmw.org/ontology/WorkflowTemplate",
+    "baseIri" : "http://www.opmw.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkflowTemplate"
+    },
+    "attributes" : [ "external" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "129",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "133",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationPredictingAlgorithm"
+    },
+    "subClasses" : [ "49", "52", "54", "59", "63" ],
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "212",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "186",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "213",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "157",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "214",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Fastq",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fastq"
+    },
+    "attributes" : [ "external" ],
+    "id" : "183",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataSink",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSink"
+    },
+    "attributes" : [ "external" ],
+    "id" : "206",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Cell",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cell"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/DataType",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataType"
+    },
+    "subClasses" : [ "65", "68" ],
+    "attributes" : [ "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "222",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "197",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "223",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "210",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataFlowAlgorithm"
+    },
+    "attributes" : [ "external" ],
+    "id" : "171",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "138",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "216",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "188",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/RFTesting",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RFTesting"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/RFPredict",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RFPredict"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationTestingAlgorithm"
+    },
+    "subClasses" : [ "70", "37", "39", "1", "4" ],
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "136" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/SplitShuffle",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SplitShuffle"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/TabularDataSet",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TabularDataSet"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "107" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Map",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Map"
+    },
+    "attributes" : [ "external" ],
+    "id" : "184",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "175",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "151",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModelingAlgorithm"
+    },
+    "subClasses" : [ "9" ],
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "87" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/Split",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Split"
+    },
+    "subClasses" : [ "12" ],
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Parameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/Algorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Algorithm"
+    },
+    "subClasses" : [ "15", "18", "20", "169", "171" ],
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConvNetLSTM"
+    },
+    "attributes" : [ "external" ],
+    "id" : "173",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/KNN",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KNN"
+    },
+    "attributes" : [ "external" ],
+    "id" : "172",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KNearestNeighborModel"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "147" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "76",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MachineLearningAlgorithm"
+    },
+    "subClasses" : [ "10", "86", "136" ],
+    "attributes" : [ "external" ],
+    "id" : "87",
+    "superClasses" : [ "169" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "246",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "154",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "243",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DTCPredict",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DTCPredict"
+    },
+    "attributes" : [ "external" ],
+    "id" : "63",
+    "superClasses" : [ "50" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "41", "22" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "242"
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "164"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "257",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "135",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "245",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "194",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "218",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Zip",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zip"
+    },
+    "attributes" : [ "external" ],
+    "id" : "182",
+    "superClasses" : [ "72" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "220"
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "43" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "259"
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NeuralNetworkModel"
+    },
+    "attributes" : [ "external" ],
+    "id" : "195",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/Json",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Json"
+    },
+    "attributes" : [ "external" ],
+    "id" : "108",
+    "superClasses" : [ "105" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSinkAlgorithm"
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Workflow"
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass",
+    "baseIri" : "http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSetClass"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "107",
+    "superClasses" : [ "105" ]
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/DataTransform",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataTransform"
+    },
+    "attributes" : [ "external" ],
+    "id" : "93",
+    "superClasses" : [ "47" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "153",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "181",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "185",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "189",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "190",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "196",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "199",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "202",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "207",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "208",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "211",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "215",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "217",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "219",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "221",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "228",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "229",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "230",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "233",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "239",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "240",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "241",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "244",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "247",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "248",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "249",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "251",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "253",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "254",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "255",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "256",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "258",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "260",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "262",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "263",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "264",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "265",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "266",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "267",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "269",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "270",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "271",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "272",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "273",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "274",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "275",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "276",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "277",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "278",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "279",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "280",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "16",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "range" : "16",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/workflow",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "workflow"
+    },
+    "domain" : "22",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/mapping",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "mapping"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasCellInColumn",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasCellInColumn"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/leaf_size",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "leaf_size"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/isLabel",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "isLabel"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "34"
+  }, {
+    "range" : "2",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "2",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasImplementation",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasImplementation"
+    },
+    "domain" : "22",
+    "attributes" : [ "object", "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/startedAt",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "startedAt"
+    },
+    "domain" : "43",
+    "comment" : {
+      "undefined" : "The time at which an activity started. See also prov:endedAtTime.\n\nhttp://www.w3.org/ns/prov#startedAtTime"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "42"
+  }, {
+    "range" : "47",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "50",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "50",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "50",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "50",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasTask",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasTask"
+    },
+    "domain" : "61",
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "range" : "50",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "66",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "66",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "2",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasComponent",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasComponent"
+    },
+    "domain" : "43",
+    "attributes" : [ "object", "external" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/represents",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "represents"
+    },
+    "domain" : "76",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/numberOfColumns",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "numberOfColumns"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/algorithm",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "algorithm"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/quoting",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "quoting"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "84"
+  }, {
+    "range" : "47",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "22",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "47",
+    "domain" : "93",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "47",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/classNameSerialized",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "classNameSerialized"
+    },
+    "domain" : "27",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasDefaultValue",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "hasDefaultValue"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/commentChar",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "commentChar"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/numTask",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "numTask"
+    },
+    "domain" : "61",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/n_jobs",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "112",
+    "label" : {
+      "IRI-based" : "n_jobs"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLProblems/hasFeature",
+    "baseIri" : "https://w3id.org/BIGOWLProblems",
+    "range" : "115",
+    "label" : {
+      "IRI-based" : "hasFeature"
+    },
+    "domain" : "114",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/quoteChar",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "quoteChar"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/isAVersionOf",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "isAVersionOf"
+    },
+    "domain" : "22",
+    "attributes" : [ "object", "external" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/numberOfLines",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "numberOfLines"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/correspondsToTemplate",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "123",
+    "label" : {
+      "IRI-based" : "correspondsToTemplate"
+    },
+    "domain" : "61",
+    "attributes" : [ "object", "external" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/n_neighbors",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "125",
+    "label" : {
+      "IRI-based" : "n_neighbors"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasRowPosition",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "127",
+    "label" : {
+      "IRI-based" : "hasRowPosition"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/module",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "module"
+    },
+    "domain" : "41",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/numberOfInputs",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "133",
+    "label" : {
+      "IRI-based" : "numberOfInputs"
+    },
+    "domain" : "132",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/doubleQuote",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "135",
+    "label" : {
+      "IRI-based" : "doubleQuote"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "134"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/resource",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "138",
+    "label" : {
+      "IRI-based" : "resource"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/p",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "140",
+    "label" : {
+      "IRI-based" : "p"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/pathTabularDataSet",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "pathTabularDataSet"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/wasLaunchedBy",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "wasLaunchedBy"
+    },
+    "domain" : "61",
+    "attributes" : [ "object", "external" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/endedAt",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "151",
+    "label" : {
+      "IRI-based" : "endedAt"
+    },
+    "domain" : "43",
+    "comment" : {
+      "undefined" : "The time at which an activity ended. See also prov:startedAtTime.\nhttp://www.w3.org/ns/prov#endedAtTime"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/private",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "154",
+    "label" : {
+      "IRI-based" : "private"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "157",
+    "label" : {
+      "IRI-based" : "isCorrectWorkflow"
+    },
+    "domain" : "61",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "156"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasHeader",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "159",
+    "label" : {
+      "IRI-based" : "hasHeader"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasCellInRow",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasCellInRow"
+    },
+    "domain" : "161",
+    "attributes" : [ "object", "external" ],
+    "id" : "160"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLAlgorithms/solves",
+    "baseIri" : "https://w3id.org/BIGOWLAlgorithms",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "solves"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/specifiesOutputClass",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "specifiesOutputClass"
+    },
+    "domain" : "164",
+    "attributes" : [ "object", "external" ],
+    "id" : "163"
+  }, {
+    "range" : "87",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "87",
+    "domain" : "136",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "range" : "107",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "16",
+    "domain" : "169",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
+  }, {
+    "range" : "16",
+    "domain" : "171",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "170"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasDocumentation",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "175",
+    "label" : {
+      "IRI-based" : "hasDocumentation"
+    },
+    "domain" : "123",
+    "comment" : {
+      "undefined" : "Property that binds a workflow template to its documentation.\n\nhttp://www.opmw.org/ontology/hasDocumentation"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "174"
+  }, {
+    "range" : "87",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/connectedTo",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "connectedTo"
+    },
+    "domain" : "43",
+    "attributes" : [ "object", "external" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasRow",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "161",
+    "label" : {
+      "IRI-based" : "hasRow"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "external" ],
+    "id" : "178"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/metric",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "180",
+    "label" : {
+      "IRI-based" : "metric"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "181"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasName",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "186",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "domain" : "76",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "185"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/skiprows",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "188",
+    "label" : {
+      "IRI-based" : "skiprows"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "187"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasDataType",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "hasDataType"
+    },
+    "domain" : "99",
+    "attributes" : [ "object", "external" ],
+    "id" : "189"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasPosition",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "191",
+    "label" : {
+      "IRI-based" : "hasPosition"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "190"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/escapeChar",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "194",
+    "label" : {
+      "IRI-based" : "escapeChar"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/weights",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "197",
+    "label" : {
+      "IRI-based" : "weights"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "196"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasColumnName",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "200",
+    "label" : {
+      "IRI-based" : "hasColumnName"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/lineDelimiter",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "192",
+    "label" : {
+      "IRI-based" : "lineDelimiter"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasChannelOutput",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasChannelOutput"
+    },
+    "domain" : "43",
+    "attributes" : [ "object", "external" ],
+    "id" : "207"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/metric_params",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "179",
+    "label" : {
+      "IRI-based" : "metric_params"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "208"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/skipInitialSpace",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "skipInitialSpace"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "209"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/implementationLanguage",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "212",
+    "label" : {
+      "IRI-based" : "implementationLanguage"
+    },
+    "domain" : "41",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "211"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/strict",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "216",
+    "label" : {
+      "IRI-based" : "strict"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "215"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/fileFormat",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "218",
+    "label" : {
+      "IRI-based" : "fileFormat"
+    },
+    "domain" : "72",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "217"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasParameter",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "hasParameter"
+    },
+    "domain" : "220",
+    "attributes" : [ "object", "external" ],
+    "id" : "219"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/numberOfOutputs",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "205",
+    "label" : {
+      "IRI-based" : "numberOfOutputs"
+    },
+    "domain" : "203",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "221"
+  }, {
+    "range" : "91",
+    "domain" : "130",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "range" : "144",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "225"
+  }, {
+    "range" : "152",
+    "domain" : "145",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "147",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "227"
+  }, {
+    "range" : "144",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "228"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/isObligatory",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "213",
+    "label" : {
+      "IRI-based" : "isObligatory"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "229"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasColumn",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasColumn"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "external" ],
+    "id" : "230"
+  }, {
+    "range" : "136",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "105",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/order",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "204",
+    "label" : {
+      "IRI-based" : "order"
+    },
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "233"
+  }, {
+    "range" : "105",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "18",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
+  }, {
+    "range" : "105",
+    "domain" : "108",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "236"
+  }, {
+    "range" : "105",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "86",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "range" : "55",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "239"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasListValue",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "214",
+    "label" : {
+      "IRI-based" : "hasListValue"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "240"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/version",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "243",
+    "label" : {
+      "IRI-based" : "version"
+    },
+    "domain" : "242",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "241"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/encoding",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "245",
+    "label" : {
+      "IRI-based" : "encoding"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "244"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/instanceParameterOf",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "instanceParameterOf"
+    },
+    "domain" : "99",
+    "attributes" : [ "object", "external" ],
+    "id" : "247"
+  }, {
+    "range" : "22",
+    "domain" : "206",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "22",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "range" : "22",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasDataValue",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "222",
+    "label" : {
+      "IRI-based" : "hasDataValue"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "251"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "252"
+  }, {
+    "range" : "72",
+    "domain" : "121",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
+  }, {
+    "range" : "169",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "254"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasColumnPosition",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "201",
+    "label" : {
+      "IRI-based" : "hasColumnPosition"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "255"
+  }, {
+    "range" : "146",
+    "domain" : "195",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/range",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "246",
+    "label" : {
+      "IRI-based" : "range"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "258"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/hasAlgorithm",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasAlgorithm"
+    },
+    "domain" : "22",
+    "attributes" : [ "object", "external" ],
+    "id" : "260"
+  }, {
+    "range" : "72",
+    "domain" : "110",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "range" : "72",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "262"
+  }, {
+    "range" : "72",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "263"
+  }, {
+    "range" : "72",
+    "domain" : "155",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
+  }, {
+    "range" : "72",
+    "domain" : "183",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "72",
+    "domain" : "182",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "hasDataPrimitiveTypeColumn"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "267"
+  }, {
+    "range" : "72",
+    "domain" : "105",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "range" : "72",
+    "domain" : "184",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "269"
+  }, {
+    "range" : "56",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "270"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/className",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "223",
+    "label" : {
+      "IRI-based" : "className"
+    },
+    "domain" : "41",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "271"
+  }, {
+    "range" : "9",
+    "domain" : "148",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLWorkflows/specifiesInputClass",
+    "baseIri" : "https://w3id.org/BIGOWLWorkflows",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "specifiesInputClass"
+    },
+    "domain" : "259",
+    "attributes" : [ "object", "external" ],
+    "id" : "273"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/delimiter",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "257",
+    "label" : {
+      "IRI-based" : "delimiter"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "274"
+  }, {
+    "iri" : "https://w3id.org/BIGOWLData/label",
+    "baseIri" : "https://w3id.org/BIGOWLData",
+    "range" : "198",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "275"
+  }, {
+    "range" : "9",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "276"
+  }, {
+    "range" : "9",
+    "domain" : "149",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "277"
+  }, {
+    "range" : "145",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "278"
+  }, {
+    "range" : "9",
+    "domain" : "173",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "279"
+  }, {
+    "range" : "9",
+    "domain" : "172",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "280"
+  } ]
+}

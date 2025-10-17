@@ -1,0 +1,196 @@
+<https://w3id.org/BIGOWLAlgorithms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/BIGOWLAlgorithms> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/BIGOWLAlgorithms> .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/created> "2022-07-14T09:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/creator> "Khaos Research" .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/description> "This ontology covers all possible kinds. It has two main subclasses: DataMiningAlgorithm and OptimizationAlgorithm, which are used to distinguish between these two families of algorithms. The former is included in the form of equivalence with the class DM-Algorithm, which is linked from DMOP." .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/modified> "2025-10-16T13:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/publisher> "Khaos Research" .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/rights> "(c) Khaos Research" .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/dc/terms/title> "BIGOWLAlgorithms" .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/vocab/vann/preferredNamespacePrefix> "BIGOWLAlgorithms" .
+<https://w3id.org/BIGOWLAlgorithms> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/BIGOWLAlgorithms" .
+<https://w3id.org/BIGOWLAlgorithms> <http://www.w3.org/2000/01/rdf-schema#label> "BIGOWLAlgorithms Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/BIGOWLAlgorithms/solves
+<https://w3id.org/BIGOWLAlgorithms/solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLAlgorithms/solves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+<https://w3id.org/BIGOWLAlgorithms/solves> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLProblems/Problem> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/Algorithm
+<https://w3id.org/BIGOWLAlgorithms/Algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/Algorithm> <http://purl.org/dc/terms/description> "Covers algorithms used to solve Problems"@en .
+<https://w3id.org/BIGOWLAlgorithms/Algorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algorithm"@en .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DTC
+<https://w3id.org/BIGOWLAlgorithms/DTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DTC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DTCPredict
+<https://w3id.org/BIGOWLAlgorithms/DTCPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DTCPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DTCTesting
+<https://w3id.org/BIGOWLAlgorithms/DTCTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DTCTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/KNN
+<https://w3id.org/BIGOWLAlgorithms/KNN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/KNN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/KNNPredict
+<https://w3id.org/BIGOWLAlgorithms/KNNPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/KNNPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/KNNTesting
+<https://w3id.org/BIGOWLAlgorithms/KNNTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/KNNTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/RF
+<https://w3id.org/BIGOWLAlgorithms/RF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/RF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/RFPredict
+<https://w3id.org/BIGOWLAlgorithms/RFPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/RFPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/RFTesting
+<https://w3id.org/BIGOWLAlgorithms/RFTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/RFTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/SVM
+<https://w3id.org/BIGOWLAlgorithms/SVM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/SVM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/SVMPredict
+<https://w3id.org/BIGOWLAlgorithms/SVMPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/SVMPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/SVMTesting
+<https://w3id.org/BIGOWLAlgorithms/SVMTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/SVMTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLProblems/Problem
+<https://w3id.org/BIGOWLProblems/Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,865 @@
+<https://w3id.org/BIGOWL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/BIGOWL> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/BIGOWL> .
+<https://w3id.org/BIGOWL> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/BIGOWLAlgorithms> .
+<https://w3id.org/BIGOWL> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/BIGOWLData> .
+<https://w3id.org/BIGOWL> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/BIGOWLProblems> .
+<https://w3id.org/BIGOWL> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/BIGOWLWorkflows> .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/created> "2022-07-14T09:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/creator> "Khaos Research" .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/description> "BIGOWL (BIG data analytics OWL2 ontology) acts as a formal schema for representing and consolidating knowledge in Big Data analytics. Knowledge incorporation is, in turn, beneficial for efficient algorithmic performance by taking part in the operator’s design, parameter selection, and human interactive and decision-making strategies." .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/modified> "2025-10-16T14:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/publisher> "Khaos Research" .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/rights> "(c) Khaos Research" .
+<https://w3id.org/BIGOWL> <http://purl.org/dc/terms/title> "BIGOWL" .
+<https://w3id.org/BIGOWL> <http://purl.org/vocab/vann/preferredNamespacePrefix> "BIGOWL" .
+<https://w3id.org/BIGOWL> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/BIGOWL" .
+<https://w3id.org/BIGOWL> <http://www.w3.org/2000/01/rdf-schema#label> "BIGOWL Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/BIGOWLAlgorithms/solves
+<https://w3id.org/BIGOWLAlgorithms/solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLAlgorithms/solves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+<https://w3id.org/BIGOWLAlgorithms/solves> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLProblems/Problem> .
+# 
+# https://w3id.org/BIGOWLData/hasCellInColumn
+<https://w3id.org/BIGOWLData/hasCellInColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLData/hasCellInColumn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Column> .
+<https://w3id.org/BIGOWLData/hasCellInColumn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Cell> .
+# 
+# https://w3id.org/BIGOWLData/hasCellInRow
+<https://w3id.org/BIGOWLData/hasCellInRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLData/hasCellInRow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Row> .
+<https://w3id.org/BIGOWLData/hasCellInRow> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Cell> .
+# 
+# https://w3id.org/BIGOWLData/hasColumn
+<https://w3id.org/BIGOWLData/hasColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLData/hasColumn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/hasColumn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Column> .
+# 
+# https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn
+<https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Column> .
+<https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/hasRow
+<https://w3id.org/BIGOWLData/hasRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLData/hasRow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/hasRow> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Row> .
+# 
+# https://w3id.org/BIGOWLWorkflows/connectedTo
+<https://w3id.org/BIGOWLWorkflows/connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/connectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/connectedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Task> .
+# 
+# https://w3id.org/BIGOWLWorkflows/correspondsToTemplate
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opmw.org/ontology/WorkflowTemplate> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasAlgorithm
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasChannelOutput
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Channel> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasComponent
+<https://w3id.org/BIGOWLWorkflows/hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDataType
+<https://w3id.org/BIGOWLWorkflows/hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasDataType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/DataType> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasImplementation
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasParameter
+<https://w3id.org/BIGOWLWorkflows/hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasParameter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasTask
+<https://w3id.org/BIGOWLWorkflows/hasTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/hasTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Task> .
+# 
+# https://w3id.org/BIGOWLWorkflows/instanceParameterOf
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+# 
+# https://w3id.org/BIGOWLWorkflows/isAVersionOf
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/specifiesInputClass
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLWorkflows/specifiesOutputClass
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLWorkflows/wasLaunchedBy
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/opmv/ns#Agent> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/BIGOWLData/algorithm
+<https://w3id.org/BIGOWLData/algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/algorithm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/algorithm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/commentChar
+<https://w3id.org/BIGOWLData/commentChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/commentChar> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/commentChar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/delimiter
+<https://w3id.org/BIGOWLData/delimiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/delimiter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/delimiter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/doubleQuote
+<https://w3id.org/BIGOWLData/doubleQuote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/doubleQuote> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/doubleQuote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/encoding
+<https://w3id.org/BIGOWLData/encoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/encoding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/encoding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/escapeChar
+<https://w3id.org/BIGOWLData/escapeChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/escapeChar> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/escapeChar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/fileFormat
+<https://w3id.org/BIGOWLData/fileFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/fileFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Data> .
+<https://w3id.org/BIGOWLData/fileFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/hasColumnName
+<https://w3id.org/BIGOWLData/hasColumnName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/hasColumnName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Column> .
+<https://w3id.org/BIGOWLData/hasColumnName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/hasColumnPosition
+<https://w3id.org/BIGOWLData/hasColumnPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/hasColumnPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Cell> .
+<https://w3id.org/BIGOWLData/hasColumnPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/hasHeader
+<https://w3id.org/BIGOWLData/hasHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/hasHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/hasHeader> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLData/hasPosition
+<https://w3id.org/BIGOWLData/hasPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/hasPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Column> .
+<https://w3id.org/BIGOWLData/hasPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/hasRowPosition
+<https://w3id.org/BIGOWLData/hasRowPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/hasRowPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Cell> .
+<https://w3id.org/BIGOWLData/hasRowPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/isLabel
+<https://w3id.org/BIGOWLData/isLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/isLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/Column> .
+<https://w3id.org/BIGOWLData/isLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLData/label
+<https://w3id.org/BIGOWLData/label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/label> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/leaf_size
+<https://w3id.org/BIGOWLData/leaf_size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/leaf_size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/leaf_size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/lineDelimiter
+<https://w3id.org/BIGOWLData/lineDelimiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/lineDelimiter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/lineDelimiter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/mapping
+<https://w3id.org/BIGOWLData/mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/mapping> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/mapping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/metric
+<https://w3id.org/BIGOWLData/metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/metric> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/metric> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/metric_params
+<https://w3id.org/BIGOWLData/metric_params> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/metric_params> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/metric_params> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/n_jobs
+<https://w3id.org/BIGOWLData/n_jobs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/n_jobs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/n_jobs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/n_neighbors
+<https://w3id.org/BIGOWLData/n_neighbors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/n_neighbors> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/n_neighbors> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/numberOfColumns
+<https://w3id.org/BIGOWLData/numberOfColumns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/numberOfColumns> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/numberOfColumns> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/numberOfLines
+<https://w3id.org/BIGOWLData/numberOfLines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/numberOfLines> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/numberOfLines> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/p
+<https://w3id.org/BIGOWLData/p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/p> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/p> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/pathTabularDataSet
+<https://w3id.org/BIGOWLData/pathTabularDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/pathTabularDataSet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/pathTabularDataSet> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/quoteChar
+<https://w3id.org/BIGOWLData/quoteChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/quoteChar> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/quoteChar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/quoting
+<https://w3id.org/BIGOWLData/quoting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/quoting> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/quoting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/represents
+<https://w3id.org/BIGOWLData/represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/represents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/BIGOWLData/represents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/resource
+<https://w3id.org/BIGOWLData/resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/resource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/resource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLData/skipInitialSpace
+<https://w3id.org/BIGOWLData/skipInitialSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/skipInitialSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/skipInitialSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLData/skiprows
+<https://w3id.org/BIGOWLData/skiprows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/skiprows> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/skiprows> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLData/strict
+<https://w3id.org/BIGOWLData/strict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/strict> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLData/TabularDataSet> .
+<https://w3id.org/BIGOWLData/strict> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLData/weights
+<https://w3id.org/BIGOWLData/weights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLData/weights> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> .
+<https://w3id.org/BIGOWLData/weights> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLProblems/hasFeature
+<https://w3id.org/BIGOWLProblems/hasFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLProblems/hasFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLProblems/Problem> .
+<https://w3id.org/BIGOWLProblems/hasFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/className
+<https://w3id.org/BIGOWLWorkflows/className> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/className> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+<https://w3id.org/BIGOWLWorkflows/className> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/classNameSerialized
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Channel> .
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/endedAt
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which an activity ended. See also prov:startedAtTime.\nhttp://www.w3.org/ns/prov#endedAtTime" .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDataValue
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDefaultValue
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDocumentation
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opmw.org/ontology/WorkflowTemplate> .
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that binds a workflow template to its documentation.\n\nhttp://www.opmw.org/ontology/hasDocumentation" .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasListValue
+<https://w3id.org/BIGOWLWorkflows/hasListValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasListValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasListValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasName
+<https://w3id.org/BIGOWLWorkflows/hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/BIGOWLWorkflows/hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/implementationLanguage
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLWorkflows/isObligatory
+<https://w3id.org/BIGOWLWorkflows/isObligatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/isObligatory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/isObligatory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLWorkflows/module
+<https://w3id.org/BIGOWLWorkflows/module> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/module> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+<https://w3id.org/BIGOWLWorkflows/module> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/numTask
+<https://w3id.org/BIGOWLWorkflows/numTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/numTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/numTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/numberOfInputs
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/numberOfOutputs
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/order
+<https://w3id.org/BIGOWLWorkflows/order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/order> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/private
+<https://w3id.org/BIGOWLWorkflows/private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/private> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/private> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLWorkflows/range
+<https://w3id.org/BIGOWLWorkflows/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/range> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/range> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/startedAt
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/2000/01/rdf-schema#range> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which an activity started. See also prov:endedAtTime.\n\nhttp://www.w3.org/ns/prov#startedAtTime" .
+# 
+# https://w3id.org/BIGOWLWorkflows/version
+<https://w3id.org/BIGOWLWorkflows/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/version> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/workflow
+<https://w3id.org/BIGOWLWorkflows/workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/workflow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/workflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/opmv/ns#Agent
+<http://purl.org/net/opmv/ns#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Text> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opmw.org/ontology/WorkflowTemplate
+<http://www.opmw.org/ontology/WorkflowTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/Algorithm
+<https://w3id.org/BIGOWLAlgorithms/Algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DTC
+<https://w3id.org/BIGOWLAlgorithms/DTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DTC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DTCPredict
+<https://w3id.org/BIGOWLAlgorithms/DTCPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DTCPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DTCTesting
+<https://w3id.org/BIGOWLAlgorithms/DTCTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DTCTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/KNN
+<https://w3id.org/BIGOWLAlgorithms/KNN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/KNN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/KNNPredict
+<https://w3id.org/BIGOWLAlgorithms/KNNPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/KNNPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/KNNTesting
+<https://w3id.org/BIGOWLAlgorithms/KNNTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/KNNTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/RF
+<https://w3id.org/BIGOWLAlgorithms/RF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/RF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/RFPredict
+<https://w3id.org/BIGOWLAlgorithms/RFPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/RFPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/RFTesting
+<https://w3id.org/BIGOWLAlgorithms/RFTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/RFTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/SVM
+<https://w3id.org/BIGOWLAlgorithms/SVM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/SVM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/SVMPredict
+<https://w3id.org/BIGOWLAlgorithms/SVMPredict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/SVMPredict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/SVMTesting
+<https://w3id.org/BIGOWLAlgorithms/SVMTesting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/SVMTesting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm
+<https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm> .
+# 
+# https://w3id.org/BIGOWLData/Bin
+<https://w3id.org/BIGOWLData/Bin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Bin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/Cell
+<https://w3id.org/BIGOWLData/Cell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/ClassificationMetric
+<https://w3id.org/BIGOWLData/ClassificationMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/ClassificationMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/TabularDataSet> .
+# 
+# https://w3id.org/BIGOWLData/Column
+<https://w3id.org/BIGOWLData/Column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/Data
+<https://w3id.org/BIGOWLData/Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/DataType
+<https://w3id.org/BIGOWLData/DataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/Fastq
+<https://w3id.org/BIGOWLData/Fastq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Fastq> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/HTML
+<https://w3id.org/BIGOWLData/HTML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/HTML> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Text> .
+# 
+# https://w3id.org/BIGOWLData/Image
+<https://w3id.org/BIGOWLData/Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/Json
+<https://w3id.org/BIGOWLData/Json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Json> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Text> .
+# 
+# https://w3id.org/BIGOWLData/Map
+<https://w3id.org/BIGOWLData/Map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/Pdf
+<https://w3id.org/BIGOWLData/Pdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Pdf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/PrimitiveType
+<https://w3id.org/BIGOWLData/PrimitiveType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/PrimitiveType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/DataType> .
+# 
+# https://w3id.org/BIGOWLData/RDF
+<https://w3id.org/BIGOWLData/RDF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/RDF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Text> .
+# 
+# https://w3id.org/BIGOWLData/Rar
+<https://w3id.org/BIGOWLData/Rar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Rar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/Row
+<https://w3id.org/BIGOWLData/Row> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/StructuredType
+<https://w3id.org/BIGOWLData/StructuredType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/StructuredType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/DataType> .
+# 
+# https://w3id.org/BIGOWLData/TabularDataSet
+<https://w3id.org/BIGOWLData/TabularDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/TabularDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass> .
+# 
+# https://w3id.org/BIGOWLData/TempFile
+<https://w3id.org/BIGOWLData/TempFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/TempFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/Text
+<https://w3id.org/BIGOWLData/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLData/Zip
+<https://w3id.org/BIGOWLData/Zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLData/Zip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLProblems/Problem
+<https://w3id.org/BIGOWLProblems/Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLWorkflows/Channel
+<https://w3id.org/BIGOWLWorkflows/Channel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Channel> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a topic when a workflow is executed, this class is used for annotating the process of execution" .
+# 
+# https://w3id.org/BIGOWLWorkflows/Component
+<https://w3id.org/BIGOWLWorkflows/Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataAnalysing
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataCollection
+<https://w3id.org/BIGOWLWorkflows/DataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataFlow
+<https://w3id.org/BIGOWLWorkflows/DataFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataFlow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataIngestion
+<https://w3id.org/BIGOWLWorkflows/DataIngestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataIngestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataCollection> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataMining
+<https://w3id.org/BIGOWLWorkflows/DataMining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataMining> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/MachineLearning> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataProcessing
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataSink
+<https://w3id.org/BIGOWLWorkflows/DataSink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataSink> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataTransform
+<https://w3id.org/BIGOWLWorkflows/DataTransform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataTransform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+# 
+# https://w3id.org/BIGOWLWorkflows/Implementation
+<https://w3id.org/BIGOWLWorkflows/Implementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLWorkflows/MachineLearning
+<https://w3id.org/BIGOWLWorkflows/MachineLearning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/MachineLearning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataAnalysing> .
+# 
+# https://w3id.org/BIGOWLWorkflows/RemoveOutlier
+<https://w3id.org/BIGOWLWorkflows/RemoveOutlier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/RemoveOutlier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+# 
+# https://w3id.org/BIGOWLWorkflows/Split
+<https://w3id.org/BIGOWLWorkflows/Split> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Split> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+# 
+# https://w3id.org/BIGOWLWorkflows/SplitShuffle
+<https://w3id.org/BIGOWLWorkflows/SplitShuffle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/SplitShuffle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Split> .
+# 
+# https://w3id.org/BIGOWLWorkflows/Task
+<https://w3id.org/BIGOWLWorkflows/Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLWorkflows/WebService
+<https://w3id.org/BIGOWLWorkflows/WebService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/WebService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/BIGOWLData/Boolean
+<https://w3id.org/BIGOWLData/Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/Date
+<https://w3id.org/BIGOWLData/Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/Double
+<https://w3id.org/BIGOWLData/Double> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Double> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/File
+<https://w3id.org/BIGOWLData/File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/StructuredType> .
+# 
+# https://w3id.org/BIGOWLData/Float
+<https://w3id.org/BIGOWLData/Float> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Float> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/Folder
+<https://w3id.org/BIGOWLData/Folder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Folder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/StructuredType> .
+# 
+# https://w3id.org/BIGOWLData/InputColumn
+<https://w3id.org/BIGOWLData/InputColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/InputColumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/StructuredType> .
+# 
+# https://w3id.org/BIGOWLData/Integer
+<https://w3id.org/BIGOWLData/Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/List
+<https://w3id.org/BIGOWLData/List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/StructuredType> .
+# 
+# https://w3id.org/BIGOWLData/String
+<https://w3id.org/BIGOWLData/String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# https://w3id.org/BIGOWLData/Timestamp
+<https://w3id.org/BIGOWLData/Timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/BIGOWLData/Timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/BIGOWLData/PrimitiveType> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

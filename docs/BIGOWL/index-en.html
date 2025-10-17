@@ -1,0 +1,3748 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>BIGOWL</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/BIGOWL","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/BIGOWL","name":"BIGOWL", "headline":"Document describing the ontology https://w3id.org/BIGOWL", "dateReleased":"2022-07-14T09:00:00", "dateModified":"2025-10-16T14:00:00", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Khaos Research"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>BIGOWL</h1>
+<h2>Release: 2022-07-14T09:00:00</h2>
+
+
+<dl>
+<dt>Modified on: 2025-10-16T14:00:00</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/BIGOWL">https://w3id.org/BIGOWL</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/BIGOWL">https://w3id.org/BIGOWL</a></dd>
+<dt>Authors:</dt>
+<dd>Khaos Research</dd>
+
+<dt>Publisher:</dt>
+<dd>Khaos Research</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="https://w3id.org/BIGOWLAlgorithms">BIGOWLAlgorithms</a></dd><dd><a href="https://w3id.org/BIGOWLData">BIGOWLData</a></dd><dd><a href="https://w3id.org/BIGOWLProblems">BIGOWLProblems</a></dd><dd><a href="https://w3id.org/BIGOWLWorkflows">BIGOWLWorkflows</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-https://opensource.org/licenses/MIT-blue.svg" alt="https://opensource.org/licenses/MIT" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Khaos Research. BIGOWL. Retrieved from: https://w3id.org/BIGOWL</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>BIGOWL</b></td><td>&lt;https://w3id.org/BIGOWL/&gt;</td></tr>
+<tr><td><b>obda</b></td><td>&lt;https://w3id.org/obda/vocabulary#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">BIGOWL Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Data/Bin" title="https://w3id.org/BIGOWLData/Bin">
+         <span>Bin</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/Channel" title="https://w3id.org/BIGOWLWorkflows/Channel">
+         <span>Channel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/ClassificationMetric"
+         title="https://w3id.org/BIGOWLData/ClassificationMetric">
+         <span>Classification Metric</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel">
+         <span>Classification Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">
+         <span>Classification Modeling Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/ClassificationPredictingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">
+         <span>Classification Predicting Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/ClassificationTestingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">
+         <span>Classification Testing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/ConvNetLSTM" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM">
+         <span>Conv Net L S T M</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/ConvNetLSTMPredict"
+         title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict">
+         <span>Conv Net L S T M Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/ConvNetLSTMTesting"
+         title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting">
+         <span>Conv Net L S T M Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DTC" title="https://w3id.org/BIGOWLAlgorithms/DTC">
+         <span>D T C</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DTCPredict" title="https://w3id.org/BIGOWLAlgorithms/DTCPredict">
+         <span>D T C Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DTCTesting" title="https://w3id.org/BIGOWLAlgorithms/DTCTesting">
+         <span>D T C Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataAnalysing" title="https://w3id.org/BIGOWLWorkflows/DataAnalysing">
+         <span>Data Analysing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DataAnalysingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm">
+         <span>Data Analysing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataCollection" title="https://w3id.org/BIGOWLWorkflows/DataCollection">
+         <span>Data Collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DataCollectionAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm">
+         <span>Data Collection Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataFlow" title="https://w3id.org/BIGOWLWorkflows/DataFlow">
+         <span>Data Flow</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DataFlowAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm">
+         <span>Data Flow Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataIngestion" title="https://w3id.org/BIGOWLWorkflows/DataIngestion">
+         <span>Data Ingestion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataMining" title="https://w3id.org/BIGOWLWorkflows/DataMining">
+         <span>Data Mining</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataProcessing" title="https://w3id.org/BIGOWLWorkflows/DataProcessing">
+         <span>Data Processing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DataProcessingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm">
+         <span>Data Processing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">
+         <span>Data Set Class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataSink" title="https://w3id.org/BIGOWLWorkflows/DataSink">
+         <span>Data Sink</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/DataSinkAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm">
+         <span>Data Sink Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/DataTransform" title="https://w3id.org/BIGOWLWorkflows/DataTransform">
+         <span>Data Transform</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel">
+         <span>Discriminant Function Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel">
+         <span>Discriminative Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Fastq" title="https://w3id.org/BIGOWLData/Fastq">
+         <span>Fastq</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/HTML" title="https://w3id.org/BIGOWLData/HTML">
+         <span>H T M L</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Image" title="https://w3id.org/BIGOWLData/Image">
+         <span>Image</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Json" title="https://w3id.org/BIGOWLData/Json">
+         <span>Json</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/KNN" title="https://w3id.org/BIGOWLAlgorithms/KNN">
+         <span>K N N</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/KNNPredict" title="https://w3id.org/BIGOWLAlgorithms/KNNPredict">
+         <span>K N N Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/KNNTesting" title="https://w3id.org/BIGOWLAlgorithms/KNNTesting">
+         <span>K N N Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">
+         <span>K Nearest Neighbor Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/MachineLearning"
+         title="https://w3id.org/BIGOWLWorkflows/MachineLearning">
+         <span>Machine Learning</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">
+         <span>Machine Learning Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Map" title="https://w3id.org/BIGOWLData/Map">
+         <span>Map</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">
+         <span>Modeling Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel">
+         <span>Neural Network Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Pdf" title="https://w3id.org/BIGOWLData/Pdf">
+         <span>Pdf</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/PredictingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm">
+         <span>Predicting Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel">
+         <span>Predictive Model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">
+         <span>Primitive Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/RDF" title="https://w3id.org/BIGOWLData/RDF">
+         <span>R D F</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/RF" title="https://w3id.org/BIGOWLAlgorithms/RF">
+         <span>R F</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/RFPredict" title="https://w3id.org/BIGOWLAlgorithms/RFPredict">
+         <span>R F Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/RFTesting" title="https://w3id.org/BIGOWLAlgorithms/RFTesting">
+         <span>R F Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Rar" title="https://w3id.org/BIGOWLData/Rar">
+         <span>Rar</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/RemoveOutlier" title="https://w3id.org/BIGOWLWorkflows/RemoveOutlier">
+         <span>Remove Outlier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/SVM" title="https://w3id.org/BIGOWLAlgorithms/SVM">
+         <span>S V M</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/SVMPredict" title="https://w3id.org/BIGOWLAlgorithms/SVMPredict">
+         <span>S V M Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/SVMTesting" title="https://w3id.org/BIGOWLAlgorithms/SVMTesting">
+         <span>S V M Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/Split" title="https://w3id.org/BIGOWLWorkflows/Split">
+         <span>Split</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/SplitShuffle" title="https://w3id.org/BIGOWLWorkflows/SplitShuffle">
+         <span>Split Shuffle</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/StructuredType" title="https://w3id.org/BIGOWLData/StructuredType">
+         <span>Structured Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">
+         <span>Tabular Data Set</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/TempFile" title="https://w3id.org/BIGOWLData/TempFile">
+         <span>Temp File</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/TestingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm">
+         <span>Testing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Text" title="https://w3id.org/BIGOWLData/Text">
+         <span>Text</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/WebService" title="https://w3id.org/BIGOWLWorkflows/WebService">
+         <span>Web Service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/WebServiceAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm">
+         <span>Web Service Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Zip" title="https://w3id.org/BIGOWLData/Zip">
+         <span>Zip</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Workflows/connectedTo" title="https://w3id.org/BIGOWLWorkflows/connectedTo">
+         <span>connected To</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/correspondsToTemplate"
+         title="https://w3id.org/BIGOWLWorkflows/correspondsToTemplate">
+         <span>corresponds To Template</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasAlgorithm" title="https://w3id.org/BIGOWLWorkflows/hasAlgorithm">
+         <span>has Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasCellInColumn" title="https://w3id.org/BIGOWLData/hasCellInColumn">
+         <span>has Cell In Column</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasCellInRow" title="https://w3id.org/BIGOWLData/hasCellInRow">
+         <span>has Cell In Row</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasChannelOutput"
+         title="https://w3id.org/BIGOWLWorkflows/hasChannelOutput">
+         <span>has Channel Output</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasColumn" title="https://w3id.org/BIGOWLData/hasColumn">
+         <span>has Column</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasComponent" title="https://w3id.org/BIGOWLWorkflows/hasComponent">
+         <span>has Component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasDataPrimitiveTypeColumn"
+         title="https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn">
+         <span>has Data Primitive Type Column</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasDataType" title="https://w3id.org/BIGOWLWorkflows/hasDataType">
+         <span>has Data Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasImplementation"
+         title="https://w3id.org/BIGOWLWorkflows/hasImplementation">
+         <span>has Implementation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasParameter" title="https://w3id.org/BIGOWLWorkflows/hasParameter">
+         <span>has Parameter</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasRow" title="https://w3id.org/BIGOWLData/hasRow">
+         <span>has Row</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasTask" title="https://w3id.org/BIGOWLWorkflows/hasTask">
+         <span>has Task</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/instanceParameterOf"
+         title="https://w3id.org/BIGOWLWorkflows/instanceParameterOf">
+         <span>instance Parameter Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/isAVersionOf" title="https://w3id.org/BIGOWLWorkflows/isAVersionOf">
+         <span>is A Version Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Algorithms/solves" title="https://w3id.org/BIGOWLAlgorithms/solves">
+         <span>solves</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/specifiesInputClass"
+         title="https://w3id.org/BIGOWLWorkflows/specifiesInputClass">
+         <span>specifies Input Class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/specifiesOutputClass"
+         title="https://w3id.org/BIGOWLWorkflows/specifiesOutputClass">
+         <span>specifies Output Class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/wasLaunchedBy" title="https://w3id.org/BIGOWLWorkflows/wasLaunchedBy">
+         <span>was Launched By</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Data/algorithm" title="https://w3id.org/BIGOWLData/algorithm">
+         <span>algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/className" title="https://w3id.org/BIGOWLWorkflows/className">
+         <span>class Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/classNameSerialized"
+         title="https://w3id.org/BIGOWLWorkflows/classNameSerialized">
+         <span>class Name Serialized</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/commentChar" title="https://w3id.org/BIGOWLData/commentChar">
+         <span>comment Char</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/delimiter" title="https://w3id.org/BIGOWLData/delimiter">
+         <span>delimiter</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/doubleQuote" title="https://w3id.org/BIGOWLData/doubleQuote">
+         <span>double Quote</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/encoding" title="https://w3id.org/BIGOWLData/encoding">
+         <span>encoding</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/endedAt" title="https://w3id.org/BIGOWLWorkflows/endedAt">
+         <span>ended At</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/escapeChar" title="https://w3id.org/BIGOWLData/escapeChar">
+         <span>escape Char</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/fileFormat" title="https://w3id.org/BIGOWLData/fileFormat">
+         <span>file Format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasColumnName" title="https://w3id.org/BIGOWLData/hasColumnName">
+         <span>has Column Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasColumnPosition" title="https://w3id.org/BIGOWLData/hasColumnPosition">
+         <span>has Column Position</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasDataValue" title="https://w3id.org/BIGOWLWorkflows/hasDataValue">
+         <span>has Data Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasDefaultValue" title="https://w3id.org/BIGOWLWorkflows/hasDefaultValue">
+         <span>has Default Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasDocumentation"
+         title="https://w3id.org/BIGOWLWorkflows/hasDocumentation">
+         <span>has Documentation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Problems/hasFeature" title="https://w3id.org/BIGOWLProblems/hasFeature">
+         <span>has Feature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasHeader" title="https://w3id.org/BIGOWLData/hasHeader">
+         <span>has Header</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasListValue" title="https://w3id.org/BIGOWLWorkflows/hasListValue">
+         <span>has List Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/hasName" title="https://w3id.org/BIGOWLWorkflows/hasName">
+         <span>has Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasPosition" title="https://w3id.org/BIGOWLData/hasPosition">
+         <span>has Position</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/hasRowPosition" title="https://w3id.org/BIGOWLData/hasRowPosition">
+         <span>has Row Position</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/implementationLanguage"
+         title="https://w3id.org/BIGOWLWorkflows/implementationLanguage">
+         <span>implementation Language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/isCorrectWorkflow"
+         title="https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow">
+         <span>is Correct Workflow</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/isLabel" title="https://w3id.org/BIGOWLData/isLabel">
+         <span>is Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/isObligatory" title="https://w3id.org/BIGOWLWorkflows/isObligatory">
+         <span>is Obligatory</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/label" title="https://w3id.org/BIGOWLData/label">
+         <span>label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/leaf_size" title="https://w3id.org/BIGOWLData/leaf_size">
+         <span>leaf size</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/lineDelimiter" title="https://w3id.org/BIGOWLData/lineDelimiter">
+         <span>line Delimiter</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/mapping" title="https://w3id.org/BIGOWLData/mapping">
+         <span>mapping</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/metric" title="https://w3id.org/BIGOWLData/metric">
+         <span>metric</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/metric_params" title="https://w3id.org/BIGOWLData/metric_params">
+         <span>metric params</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/module" title="https://w3id.org/BIGOWLWorkflows/module">
+         <span>module</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/n_jobs" title="https://w3id.org/BIGOWLData/n_jobs">
+         <span>n jobs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/n_neighbors" title="https://w3id.org/BIGOWLData/n_neighbors">
+         <span>n neighbors</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/numTask" title="https://w3id.org/BIGOWLWorkflows/numTask">
+         <span>num Task</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/numberOfColumns" title="https://w3id.org/BIGOWLData/numberOfColumns">
+         <span>number Of Columns</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/numberOfInputs" title="https://w3id.org/BIGOWLWorkflows/numberOfInputs">
+         <span>number Of Inputs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/numberOfLines" title="https://w3id.org/BIGOWLData/numberOfLines">
+         <span>number Of Lines</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/numberOfOutputs" title="https://w3id.org/BIGOWLWorkflows/numberOfOutputs">
+         <span>number Of Outputs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/order" title="https://w3id.org/BIGOWLWorkflows/order">
+         <span>order</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/p" title="https://w3id.org/BIGOWLData/p">
+         <span>p</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/pathTabularDataSet" title="https://w3id.org/BIGOWLData/pathTabularDataSet">
+         <span>path Tabular Data Set</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/private" title="https://w3id.org/BIGOWLWorkflows/private">
+         <span>private</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/quoteChar" title="https://w3id.org/BIGOWLData/quoteChar">
+         <span>quote Char</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/quoting" title="https://w3id.org/BIGOWLData/quoting">
+         <span>quoting</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/range" title="https://w3id.org/BIGOWLWorkflows/range">
+         <span>range</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/represents" title="https://w3id.org/BIGOWLData/represents">
+         <span>represents</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/resource" title="https://w3id.org/BIGOWLData/resource">
+         <span>resource</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/skipInitialSpace" title="https://w3id.org/BIGOWLData/skipInitialSpace">
+         <span>skip Initial Space</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/skiprows" title="https://w3id.org/BIGOWLData/skiprows">
+         <span>skiprows</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/startedAt" title="https://w3id.org/BIGOWLWorkflows/startedAt">
+         <span>started At</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/strict" title="https://w3id.org/BIGOWLData/strict">
+         <span>strict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/version" title="https://w3id.org/BIGOWLWorkflows/version">
+         <span>version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/weights" title="https://w3id.org/BIGOWLData/weights">
+         <span>weights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Workflows/workflow" title="https://w3id.org/BIGOWLWorkflows/workflow">
+         <span>workflow</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Data/Boolean" title="https://w3id.org/BIGOWLData/Boolean">
+         <span>Boolean</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Date" title="https://w3id.org/BIGOWLData/Date">
+         <span>Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Double" title="https://w3id.org/BIGOWLData/Double">
+         <span>Double</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/File" title="https://w3id.org/BIGOWLData/File">
+         <span>File</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Float" title="https://w3id.org/BIGOWLData/Float">
+         <span>Float</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Folder" title="https://w3id.org/BIGOWLData/Folder">
+         <span>Folder</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/InputColumn" title="https://w3id.org/BIGOWLData/InputColumn">
+         <span>Input Column</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Integer" title="https://w3id.org/BIGOWLData/Integer">
+         <span>Integer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/List" title="https://w3id.org/BIGOWLData/List">
+         <span>List</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/String" title="https://w3id.org/BIGOWLData/String">
+         <span>String</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Data/Timestamp" title="https://w3id.org/BIGOWLData/Timestamp">
+         <span>Timestamp</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">BIGOWL Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">BIGOWL (BIG data analytics OWL2 ontology) acts as a formal schema for representing and consolidating knowledge in Big Data analytics. Knowledge incorporation is, in turn, beneficial for efficient algorithmic performance by taking part in the operator’s design, parameter selection, and human interactive and decision-making strategies.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for BIGOWL Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by BIGOWL Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Data/Bin" title="https://w3id.org/BIGOWLData/Bin"> <span>Bin</span> </a></li>
+  <li><a href="#Workflows/Channel" title="https://w3id.org/BIGOWLWorkflows/Channel"> <span>Channel</span> </a></li>
+  <li><a href="#Data/ClassificationMetric" title="https://w3id.org/BIGOWLData/ClassificationMetric"> <span>Classification Metric</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel"> <span>Classification Model</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"> <span>Classification Modeling Algorithm</span> </a></li>
+  <li><a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"> <span>Classification Predicting Algorithm</span> </a></li>
+  <li><a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"> <span>Classification Testing Algorithm</span> </a></li>
+  <li><a href="#Algorithms/ConvNetLSTM" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM"> <span>Conv Net L S T M</span> </a></li>
+  <li><a href="#Algorithms/ConvNetLSTMPredict" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict"> <span>Conv Net L S T M Predict</span> </a></li>
+  <li><a href="#Algorithms/ConvNetLSTMTesting" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting"> <span>Conv Net L S T M Testing</span> </a></li>
+  <li><a href="#Algorithms/DTC" title="https://w3id.org/BIGOWLAlgorithms/DTC"> <span>D T C</span> </a></li>
+  <li><a href="#Algorithms/DTCPredict" title="https://w3id.org/BIGOWLAlgorithms/DTCPredict"> <span>D T C Predict</span> </a></li>
+  <li><a href="#Algorithms/DTCTesting" title="https://w3id.org/BIGOWLAlgorithms/DTCTesting"> <span>D T C Testing</span> </a></li>
+  <li><a href="#Workflows/DataAnalysing" title="https://w3id.org/BIGOWLWorkflows/DataAnalysing"> <span>Data Analysing</span> </a></li>
+  <li><a href="#Algorithms/DataAnalysingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm"> <span>Data Analysing Algorithm</span> </a></li>
+  <li><a href="#Workflows/DataCollection" title="https://w3id.org/BIGOWLWorkflows/DataCollection"> <span>Data Collection</span> </a></li>
+  <li><a href="#Algorithms/DataCollectionAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm"> <span>Data Collection Algorithm</span> </a></li>
+  <li><a href="#Workflows/DataFlow" title="https://w3id.org/BIGOWLWorkflows/DataFlow"> <span>Data Flow</span> </a></li>
+  <li><a href="#Algorithms/DataFlowAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm"> <span>Data Flow Algorithm</span> </a></li>
+  <li><a href="#Workflows/DataIngestion" title="https://w3id.org/BIGOWLWorkflows/DataIngestion"> <span>Data Ingestion</span> </a></li>
+  <li><a href="#Workflows/DataMining" title="https://w3id.org/BIGOWLWorkflows/DataMining"> <span>Data Mining</span> </a></li>
+  <li><a href="#Workflows/DataProcessing" title="https://w3id.org/BIGOWLWorkflows/DataProcessing"> <span>Data Processing</span> </a></li>
+  <li><a href="#Algorithms/DataProcessingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm"> <span>Data Processing Algorithm</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass"> <span>Data Set Class</span> </a></li>
+  <li><a href="#Workflows/DataSink" title="https://w3id.org/BIGOWLWorkflows/DataSink"> <span>Data Sink</span> </a></li>
+  <li><a href="#Algorithms/DataSinkAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm"> <span>Data Sink Algorithm</span> </a></li>
+  <li><a href="#Workflows/DataTransform" title="https://w3id.org/BIGOWLWorkflows/DataTransform"> <span>Data Transform</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel"> <span>Discriminant Function Model</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel"> <span>Discriminative Model</span> </a></li>
+  <li><a href="#Data/Fastq" title="https://w3id.org/BIGOWLData/Fastq"> <span>Fastq</span> </a></li>
+  <li><a href="#Data/HTML" title="https://w3id.org/BIGOWLData/HTML"> <span>H T M L</span> </a></li>
+  <li><a href="#Data/Image" title="https://w3id.org/BIGOWLData/Image"> <span>Image</span> </a></li>
+  <li><a href="#Data/Json" title="https://w3id.org/BIGOWLData/Json"> <span>Json</span> </a></li>
+  <li><a href="#Algorithms/KNN" title="https://w3id.org/BIGOWLAlgorithms/KNN"> <span>K N N</span> </a></li>
+  <li><a href="#Algorithms/KNNPredict" title="https://w3id.org/BIGOWLAlgorithms/KNNPredict"> <span>K N N Predict</span> </a></li>
+  <li><a href="#Algorithms/KNNTesting" title="https://w3id.org/BIGOWLAlgorithms/KNNTesting"> <span>K N N Testing</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel"> <span>K Nearest Neighbor Model</span> </a></li>
+  <li><a href="#Workflows/MachineLearning" title="https://w3id.org/BIGOWLWorkflows/MachineLearning"> <span>Machine Learning</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"> <span>Machine Learning Algorithm</span> </a></li>
+  <li><a href="#Data/Map" title="https://w3id.org/BIGOWLData/Map"> <span>Map</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"> <span>Modeling Algorithm</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel"> <span>Neural Network Model</span> </a></li>
+  <li><a href="#Data/Pdf" title="https://w3id.org/BIGOWLData/Pdf"> <span>Pdf</span> </a></li>
+  <li><a href="#Algorithms/PredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm"> <span>Predicting Algorithm</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel"> <span>Predictive Model</span> </a></li>
+  <li><a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType"> <span>Primitive Type</span> </a></li>
+  <li><a href="#Data/RDF" title="https://w3id.org/BIGOWLData/RDF"> <span>R D F</span> </a></li>
+  <li><a href="#Algorithms/RF" title="https://w3id.org/BIGOWLAlgorithms/RF"> <span>R F</span> </a></li>
+  <li><a href="#Algorithms/RFPredict" title="https://w3id.org/BIGOWLAlgorithms/RFPredict"> <span>R F Predict</span> </a></li>
+  <li><a href="#Algorithms/RFTesting" title="https://w3id.org/BIGOWLAlgorithms/RFTesting"> <span>R F Testing</span> </a></li>
+  <li><a href="#Data/Rar" title="https://w3id.org/BIGOWLData/Rar"> <span>Rar</span> </a></li>
+  <li><a href="#Workflows/RemoveOutlier" title="https://w3id.org/BIGOWLWorkflows/RemoveOutlier"> <span>Remove Outlier</span> </a></li>
+  <li><a href="#Algorithms/SVM" title="https://w3id.org/BIGOWLAlgorithms/SVM"> <span>S V M</span> </a></li>
+  <li><a href="#Algorithms/SVMPredict" title="https://w3id.org/BIGOWLAlgorithms/SVMPredict"> <span>S V M Predict</span> </a></li>
+  <li><a href="#Algorithms/SVMTesting" title="https://w3id.org/BIGOWLAlgorithms/SVMTesting"> <span>S V M Testing</span> </a></li>
+  <li><a href="#Workflows/Split" title="https://w3id.org/BIGOWLWorkflows/Split"> <span>Split</span> </a></li>
+  <li><a href="#Workflows/SplitShuffle" title="https://w3id.org/BIGOWLWorkflows/SplitShuffle"> <span>Split Shuffle</span> </a></li>
+  <li><a href="#Data/StructuredType" title="https://w3id.org/BIGOWLData/StructuredType"> <span>Structured Type</span> </a></li>
+  <li><a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet"> <span>Tabular Data Set</span> </a></li>
+  <li><a href="#Data/TempFile" title="https://w3id.org/BIGOWLData/TempFile"> <span>Temp File</span> </a></li>
+  <li><a href="#Algorithms/TestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm"> <span>Testing Algorithm</span> </a></li>
+  <li><a href="#Data/Text" title="https://w3id.org/BIGOWLData/Text"> <span>Text</span> </a></li>
+  <li><a href="#Workflows/WebService" title="https://w3id.org/BIGOWLWorkflows/WebService"> <span>Web Service</span> </a></li>
+  <li><a href="#Algorithms/WebServiceAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm"> <span>Web Service Algorithm</span> </a></li>
+  <li><a href="#Data/Zip" title="https://w3id.org/BIGOWLData/Zip"> <span>Zip</span> </a></li>
+ </ul>
+ <div class="entity" id="Data/Bin">
+  <h3>Bin<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Bin</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/Channel">
+  <h3>Channel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/Channel</p>
+  <div class="comment">
+   <span class="markdown">Represents a topic when a workflow is executed, this class is used for annotating the process of execution</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Workflows/classNameSerialized" title="https://w3id.org/BIGOWLWorkflows/classNameSerialized">class Name Serialized</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#Workflows/hasChannelOutput" title="https://w3id.org/BIGOWLWorkflows/hasChannelOutput">has Channel Output</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/ClassificationMetric">
+  <h3>Classification Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/ClassificationMetric</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel">
+  <h3>Classification Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel">Predictive Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel">Discriminant Function Model</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel">Discriminative Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">
+  <h3>Classification Modeling Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ConvNetLSTM" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM">Conv Net L S T M</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/DTC" title="https://w3id.org/BIGOWLAlgorithms/DTC">D T C</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/KNN" title="https://w3id.org/BIGOWLAlgorithms/KNN">K N N</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/RF" title="https://w3id.org/BIGOWLAlgorithms/RF">R F</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/SVM" title="https://w3id.org/BIGOWLAlgorithms/SVM">S V M</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/ClassificationPredictingAlgorithm">
+  <h3>Classification Predicting Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/PredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm">Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ConvNetLSTMPredict" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict">Conv Net L S T M Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/DTCPredict" title="https://w3id.org/BIGOWLAlgorithms/DTCPredict">D T C Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/KNNPredict" title="https://w3id.org/BIGOWLAlgorithms/KNNPredict">K N N Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/RFPredict" title="https://w3id.org/BIGOWLAlgorithms/RFPredict">R F Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/SVMPredict" title="https://w3id.org/BIGOWLAlgorithms/SVMPredict">S V M Predict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/ClassificationTestingAlgorithm">
+  <h3>Classification Testing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/TestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm">Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ConvNetLSTMTesting" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting">Conv Net L S T M Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/DTCTesting" title="https://w3id.org/BIGOWLAlgorithms/DTCTesting">D T C Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/KNNTesting" title="https://w3id.org/BIGOWLAlgorithms/KNNTesting">K N N Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/RFTesting" title="https://w3id.org/BIGOWLAlgorithms/RFTesting">R F Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/SVMTesting" title="https://w3id.org/BIGOWLAlgorithms/SVMTesting">S V M Testing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/ConvNetLSTM">
+  <h3>Conv Net L S T M<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/ConvNetLSTMPredict">
+  <h3>Conv Net L S T M Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/ConvNetLSTMTesting">
+  <h3>Conv Net L S T M Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DTC">
+  <h3>D T C<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DTC</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DTCPredict">
+  <h3>D T C Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DTCPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DTCTesting">
+  <h3>D T C Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DTCTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataAnalysing">
+  <h3>Data Analysing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataAnalysing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/MachineLearning" title="https://w3id.org/BIGOWLWorkflows/MachineLearning">Machine Learning</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DataAnalysingAlgorithm">
+  <h3>Data Analysing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataCollection">
+  <h3>Data Collection<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataCollection</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataIngestion" title="https://w3id.org/BIGOWLWorkflows/DataIngestion">Data Ingestion</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DataCollectionAlgorithm">
+  <h3>Data Collection Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataFlow">
+  <h3>Data Flow<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataFlow</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DataFlowAlgorithm">
+  <h3>Data Flow Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataIngestion">
+  <h3>Data Ingestion<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataIngestion</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataCollection" title="https://w3id.org/BIGOWLWorkflows/DataCollection">Data Collection</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataMining">
+  <h3>Data Mining<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataMining</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/MachineLearning" title="https://w3id.org/BIGOWLWorkflows/MachineLearning">Machine Learning</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataProcessing">
+  <h3>Data Processing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataProcessing</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataTransform" title="https://w3id.org/BIGOWLWorkflows/DataTransform">Data Transform</a> <sup class="type-c" title="class">c</sup>, <a href="#Workflows/RemoveOutlier" title="https://w3id.org/BIGOWLWorkflows/RemoveOutlier">Remove Outlier</a> <sup class="type-c" title="class">c</sup>, <a href="#Workflows/Split" title="https://w3id.org/BIGOWLWorkflows/Split">Split</a> <sup class="type-c" title="class">c</sup>, <a href="#Workflows/WebService" title="https://w3id.org/BIGOWLWorkflows/WebService">Web Service</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DataProcessingAlgorithm">
+  <h3>Data Processing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/WebServiceAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm">Web Service Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">
+  <h3>Data Set Class<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data/Text" title="https://w3id.org/BIGOWLData/Text">Text</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataSink">
+  <h3>Data Sink<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataSink</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/DataSinkAlgorithm">
+  <h3>Data Sink Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/DataTransform">
+  <h3>Data Transform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/DataTransform</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataProcessing" title="https://w3id.org/BIGOWLWorkflows/DataProcessing">Data Processing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel">
+  <h3>Discriminant Function Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel">Classification Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel">Neural Network Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel">
+  <h3>Discriminative Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel">Classification Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Fastq">
+  <h3>Fastq<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Fastq</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/HTML">
+  <h3>H T M L<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/HTML</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data/Text" title="https://w3id.org/BIGOWLData/Text">Text</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Image">
+  <h3>Image<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Image</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Json">
+  <h3>Json<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Json</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data/Text" title="https://w3id.org/BIGOWLData/Text">Text</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/KNN">
+  <h3>K N N<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/KNN</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/KNNPredict">
+  <h3>K N N Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/KNNPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/KNNTesting">
+  <h3>K N N Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/KNNTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">
+  <h3>K Nearest Neighbor Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminativeModel">Discriminative Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Data/algorithm" title="https://w3id.org/BIGOWLData/algorithm">algorithm</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/label" title="https://w3id.org/BIGOWLData/label">label</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/leaf_size" title="https://w3id.org/BIGOWLData/leaf_size">leaf size</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/metric" title="https://w3id.org/BIGOWLData/metric">metric</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/metric_params" title="https://w3id.org/BIGOWLData/metric_params">metric params</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/n_jobs" title="https://w3id.org/BIGOWLData/n_jobs">n jobs</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/n_neighbors" title="https://w3id.org/BIGOWLData/n_neighbors">n neighbors</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/p" title="https://w3id.org/BIGOWLData/p">p</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/resource" title="https://w3id.org/BIGOWLData/resource">resource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/weights" title="https://w3id.org/BIGOWLData/weights">weights</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/MachineLearning">
+  <h3>Machine Learning<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/MachineLearning</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataAnalysing" title="https://w3id.org/BIGOWLWorkflows/DataAnalysing">Data Analysing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataMining" title="https://w3id.org/BIGOWLWorkflows/DataMining">Data Mining</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">
+  <h3>Machine Learning Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/DataAnalysingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm">Data Analysing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/PredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm">Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#Algorithms/TestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm">Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Map">
+  <h3>Map<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Map</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">
+  <h3>Modeling Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel">
+  <h3>Neural Network Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NeuralNetworkModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DiscriminantFunctionModel">Discriminant Function Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Pdf">
+  <h3>Pdf<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Pdf</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/PredictingAlgorithm">
+  <h3>Predicting Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel">
+  <h3>Predictive Model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PredictiveModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Model">D M Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModel">Classification Model</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/PrimitiveType">
+  <h3>Primitive Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/PrimitiveType</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/DataType" target="_blank" title="https://w3id.org/BIGOWLData/DataType">Data Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#Data/hasDataPrimitiveTypeColumn" title="https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn">has Data Primitive Type Column</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Data/Boolean" title="https://w3id.org/BIGOWLData/Boolean">Boolean</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/Date" title="https://w3id.org/BIGOWLData/Date">Date</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/Double" title="https://w3id.org/BIGOWLData/Double">Double</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/Float" title="https://w3id.org/BIGOWLData/Float">Float</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/Integer" title="https://w3id.org/BIGOWLData/Integer">Integer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/String" title="https://w3id.org/BIGOWLData/String">String</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/Timestamp" title="https://w3id.org/BIGOWLData/Timestamp">Timestamp</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/RDF">
+  <h3>R D F<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/RDF</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data/Text" title="https://w3id.org/BIGOWLData/Text">Text</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/RF">
+  <h3>R F<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/RF</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/RFPredict">
+  <h3>R F Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/RFPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/RFTesting">
+  <h3>R F Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/RFTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Rar">
+  <h3>Rar<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Rar</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/RemoveOutlier">
+  <h3>Remove Outlier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/RemoveOutlier</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataProcessing" title="https://w3id.org/BIGOWLWorkflows/DataProcessing">Data Processing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/SVM">
+  <h3>S V M<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/SVM</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/SVMPredict">
+  <h3>S V M Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/SVMPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/SVMTesting">
+  <h3>S V M Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/SVMTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/Split">
+  <h3>Split<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/Split</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataProcessing" title="https://w3id.org/BIGOWLWorkflows/DataProcessing">Data Processing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/SplitShuffle" title="https://w3id.org/BIGOWLWorkflows/SplitShuffle">Split Shuffle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/SplitShuffle">
+  <h3>Split Shuffle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/SplitShuffle</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/Split" title="https://w3id.org/BIGOWLWorkflows/Split">Split</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/StructuredType">
+  <h3>Structured Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/StructuredType</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/DataType" target="_blank" title="https://w3id.org/BIGOWLData/DataType">Data Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Data/File" title="https://w3id.org/BIGOWLData/File">File</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/Folder" title="https://w3id.org/BIGOWLData/Folder">Folder</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/InputColumn" title="https://w3id.org/BIGOWLData/InputColumn">Input Column</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Data/List" title="https://w3id.org/BIGOWLData/List">List</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/TabularDataSet">
+  <h3>Tabular Data Set<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/TabularDataSet</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">Data Set Class</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Data/ClassificationMetric" title="https://w3id.org/BIGOWLData/ClassificationMetric">Classification Metric</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Data/commentChar" title="https://w3id.org/BIGOWLData/commentChar">comment Char</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/delimiter" title="https://w3id.org/BIGOWLData/delimiter">delimiter</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/doubleQuote" title="https://w3id.org/BIGOWLData/doubleQuote">double Quote</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/encoding" title="https://w3id.org/BIGOWLData/encoding">encoding</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/escapeChar" title="https://w3id.org/BIGOWLData/escapeChar">escape Char</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/hasColumn" title="https://w3id.org/BIGOWLData/hasColumn">has Column</a> <sup class="type-op" title="object property">op</sup>, <a href="#Data/hasHeader" title="https://w3id.org/BIGOWLData/hasHeader">has Header</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/hasRow" title="https://w3id.org/BIGOWLData/hasRow">has Row</a> <sup class="type-op" title="object property">op</sup>, <a href="#Data/lineDelimiter" title="https://w3id.org/BIGOWLData/lineDelimiter">line Delimiter</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/mapping" title="https://w3id.org/BIGOWLData/mapping">mapping</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/numberOfColumns" title="https://w3id.org/BIGOWLData/numberOfColumns">number Of Columns</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/numberOfLines" title="https://w3id.org/BIGOWLData/numberOfLines">number Of Lines</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/pathTabularDataSet" title="https://w3id.org/BIGOWLData/pathTabularDataSet">path Tabular Data Set</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/quoteChar" title="https://w3id.org/BIGOWLData/quoteChar">quote Char</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/quoting" title="https://w3id.org/BIGOWLData/quoting">quoting</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/skipInitialSpace" title="https://w3id.org/BIGOWLData/skipInitialSpace">skip Initial Space</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/skiprows" title="https://w3id.org/BIGOWLData/skiprows">skiprows</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Data/strict" title="https://w3id.org/BIGOWLData/strict">strict</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/TempFile">
+  <h3>Temp File<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/TempFile</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/TestingAlgorithm">
+  <h3>Testing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Text">
+  <h3>Text<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Text</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">Data Set Class</a> <sup class="type-c" title="class">c</sup>, <a href="#Data/HTML" title="https://w3id.org/BIGOWLData/HTML">H T M L</a> <sup class="type-c" title="class">c</sup>, <a href="#Data/Json" title="https://w3id.org/BIGOWLData/Json">Json</a> <sup class="type-c" title="class">c</sup>, <a href="#Data/RDF" title="https://w3id.org/BIGOWLData/RDF">R D F</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workflows/WebService">
+  <h3>Web Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/WebService</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Workflows/DataProcessing" title="https://w3id.org/BIGOWLWorkflows/DataProcessing">Data Processing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Algorithms/WebServiceAlgorithm">
+  <h3>Web Service Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Algorithms/DataProcessingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm">Data Processing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Zip">
+  <h3>Zip<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Zip</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#Workflows/connectedTo" title="https://w3id.org/BIGOWLWorkflows/connectedTo"> <span>connected To</span> </a></li>
+  <li><a href="#Workflows/correspondsToTemplate" title="https://w3id.org/BIGOWLWorkflows/correspondsToTemplate"> <span>corresponds To Template</span> </a></li>
+  <li><a href="#Workflows/hasAlgorithm" title="https://w3id.org/BIGOWLWorkflows/hasAlgorithm"> <span>has Algorithm</span> </a></li>
+  <li><a href="#Data/hasCellInColumn" title="https://w3id.org/BIGOWLData/hasCellInColumn"> <span>has Cell In Column</span> </a></li>
+  <li><a href="#Data/hasCellInRow" title="https://w3id.org/BIGOWLData/hasCellInRow"> <span>has Cell In Row</span> </a></li>
+  <li><a href="#Workflows/hasChannelOutput" title="https://w3id.org/BIGOWLWorkflows/hasChannelOutput"> <span>has Channel Output</span> </a></li>
+  <li><a href="#Data/hasColumn" title="https://w3id.org/BIGOWLData/hasColumn"> <span>has Column</span> </a></li>
+  <li><a href="#Workflows/hasComponent" title="https://w3id.org/BIGOWLWorkflows/hasComponent"> <span>has Component</span> </a></li>
+  <li><a href="#Data/hasDataPrimitiveTypeColumn" title="https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn"> <span>has Data Primitive Type Column</span> </a></li>
+  <li><a href="#Workflows/hasDataType" title="https://w3id.org/BIGOWLWorkflows/hasDataType"> <span>has Data Type</span> </a></li>
+  <li><a href="#Workflows/hasImplementation" title="https://w3id.org/BIGOWLWorkflows/hasImplementation"> <span>has Implementation</span> </a></li>
+  <li><a href="#Workflows/hasParameter" title="https://w3id.org/BIGOWLWorkflows/hasParameter"> <span>has Parameter</span> </a></li>
+  <li><a href="#Data/hasRow" title="https://w3id.org/BIGOWLData/hasRow"> <span>has Row</span> </a></li>
+  <li><a href="#Workflows/hasTask" title="https://w3id.org/BIGOWLWorkflows/hasTask"> <span>has Task</span> </a></li>
+  <li><a href="#Workflows/instanceParameterOf" title="https://w3id.org/BIGOWLWorkflows/instanceParameterOf"> <span>instance Parameter Of</span> </a></li>
+  <li><a href="#Workflows/isAVersionOf" title="https://w3id.org/BIGOWLWorkflows/isAVersionOf"> <span>is A Version Of</span> </a></li>
+  <li><a href="#Algorithms/solves" title="https://w3id.org/BIGOWLAlgorithms/solves"> <span>solves</span> </a></li>
+  <li><a href="#Workflows/specifiesInputClass" title="https://w3id.org/BIGOWLWorkflows/specifiesInputClass"> <span>specifies Input Class</span> </a></li>
+  <li><a href="#Workflows/specifiesOutputClass" title="https://w3id.org/BIGOWLWorkflows/specifiesOutputClass"> <span>specifies Output Class</span> </a></li>
+  <li><a href="#Workflows/wasLaunchedBy" title="https://w3id.org/BIGOWLWorkflows/wasLaunchedBy"> <span>was Launched By</span> </a></li>
+ </ul>
+ <div class="entity" id="Workflows/connectedTo">
+  <h3>connected To<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/connectedTo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/correspondsToTemplate">
+  <h3>corresponds To Template<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/correspondsToTemplate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.opmw.org/ontology/WorkflowTemplate" target="_blank" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasAlgorithm">
+  <h3>has Algorithm<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasAlgorithm</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasCellInColumn">
+  <h3>has Cell In Column<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasCellInColumn</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Column" target="_blank" title="https://w3id.org/BIGOWLData/Column">Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Cell" target="_blank" title="https://w3id.org/BIGOWLData/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasCellInRow">
+  <h3>has Cell In Row<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasCellInRow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Row" target="_blank" title="https://w3id.org/BIGOWLData/Row">Row</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Cell" target="_blank" title="https://w3id.org/BIGOWLData/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasChannelOutput">
+  <h3>has Channel Output<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasChannelOutput</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Workflows/Channel" title="https://w3id.org/BIGOWLWorkflows/Channel">Channel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasColumn">
+  <h3>has Column<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasColumn</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Column" target="_blank" title="https://w3id.org/BIGOWLData/Column">Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasComponent">
+  <h3>has Component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasComponent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasDataPrimitiveTypeColumn">
+  <h3>has Data Primitive Type Column<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasDataPrimitiveTypeColumn</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Column" target="_blank" title="https://w3id.org/BIGOWLData/Column">Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasDataType">
+  <h3>has Data Type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasDataType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/DataType" target="_blank" title="https://w3id.org/BIGOWLData/DataType">Data Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasImplementation">
+  <h3>has Implementation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasImplementation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Implementation" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Implementation">Implementation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasParameter">
+  <h3>has Parameter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasParameter</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasRow">
+  <h3>has Row<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasRow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Row" target="_blank" title="https://w3id.org/BIGOWLData/Row">Row</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasTask">
+  <h3>has Task<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasTask</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/instanceParameterOf">
+  <h3>instance Parameter Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/instanceParameterOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/isAVersionOf">
+  <h3>is A Version Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/isAVersionOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Algorithms/solves">
+  <h3>solves<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/solves</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLAlgorithms/Algorithm" target="_blank" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLProblems/Problem" target="_blank" title="https://w3id.org/BIGOWLProblems/Problem">Problem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/specifiesInputClass">
+  <h3>specifies Input Class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/specifiesInputClass</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/specifiesOutputClass">
+  <h3>specifies Output Class<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/specifiesOutputClass</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/wasLaunchedBy">
+  <h3>was Launched By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/wasLaunchedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/net/opmv/ns#Agent" target="_blank" title="http://purl.org/net/opmv/ns#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#Data/algorithm" title="https://w3id.org/BIGOWLData/algorithm"> <span>algorithm</span> </a></li>
+  <li><a href="#Workflows/className" title="https://w3id.org/BIGOWLWorkflows/className"> <span>class Name</span> </a></li>
+  <li><a href="#Workflows/classNameSerialized" title="https://w3id.org/BIGOWLWorkflows/classNameSerialized"> <span>class Name Serialized</span> </a></li>
+  <li><a href="#Data/commentChar" title="https://w3id.org/BIGOWLData/commentChar"> <span>comment Char</span> </a></li>
+  <li><a href="#Data/delimiter" title="https://w3id.org/BIGOWLData/delimiter"> <span>delimiter</span> </a></li>
+  <li><a href="#Data/doubleQuote" title="https://w3id.org/BIGOWLData/doubleQuote"> <span>double Quote</span> </a></li>
+  <li><a href="#Data/encoding" title="https://w3id.org/BIGOWLData/encoding"> <span>encoding</span> </a></li>
+  <li><a href="#Workflows/endedAt" title="https://w3id.org/BIGOWLWorkflows/endedAt"> <span>ended At</span> </a></li>
+  <li><a href="#Data/escapeChar" title="https://w3id.org/BIGOWLData/escapeChar"> <span>escape Char</span> </a></li>
+  <li><a href="#Data/fileFormat" title="https://w3id.org/BIGOWLData/fileFormat"> <span>file Format</span> </a></li>
+  <li><a href="#Data/hasColumnName" title="https://w3id.org/BIGOWLData/hasColumnName"> <span>has Column Name</span> </a></li>
+  <li><a href="#Data/hasColumnPosition" title="https://w3id.org/BIGOWLData/hasColumnPosition"> <span>has Column Position</span> </a></li>
+  <li><a href="#Workflows/hasDataValue" title="https://w3id.org/BIGOWLWorkflows/hasDataValue"> <span>has Data Value</span> </a></li>
+  <li><a href="#Workflows/hasDefaultValue" title="https://w3id.org/BIGOWLWorkflows/hasDefaultValue"> <span>has Default Value</span> </a></li>
+  <li><a href="#Workflows/hasDocumentation" title="https://w3id.org/BIGOWLWorkflows/hasDocumentation"> <span>has Documentation</span> </a></li>
+  <li><a href="#Problems/hasFeature" title="https://w3id.org/BIGOWLProblems/hasFeature"> <span>has Feature</span> </a></li>
+  <li><a href="#Data/hasHeader" title="https://w3id.org/BIGOWLData/hasHeader"> <span>has Header</span> </a></li>
+  <li><a href="#Workflows/hasListValue" title="https://w3id.org/BIGOWLWorkflows/hasListValue"> <span>has List Value</span> </a></li>
+  <li><a href="#Workflows/hasName" title="https://w3id.org/BIGOWLWorkflows/hasName"> <span>has Name</span> </a></li>
+  <li><a href="#Data/hasPosition" title="https://w3id.org/BIGOWLData/hasPosition"> <span>has Position</span> </a></li>
+  <li><a href="#Data/hasRowPosition" title="https://w3id.org/BIGOWLData/hasRowPosition"> <span>has Row Position</span> </a></li>
+  <li><a href="#Workflows/implementationLanguage" title="https://w3id.org/BIGOWLWorkflows/implementationLanguage"> <span>implementation Language</span> </a></li>
+  <li><a href="#Workflows/isCorrectWorkflow" title="https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow"> <span>is Correct Workflow</span> </a></li>
+  <li><a href="#Data/isLabel" title="https://w3id.org/BIGOWLData/isLabel"> <span>is Label</span> </a></li>
+  <li><a href="#Workflows/isObligatory" title="https://w3id.org/BIGOWLWorkflows/isObligatory"> <span>is Obligatory</span> </a></li>
+  <li><a href="#Data/label" title="https://w3id.org/BIGOWLData/label"> <span>label</span> </a></li>
+  <li><a href="#Data/leaf_size" title="https://w3id.org/BIGOWLData/leaf_size"> <span>leaf size</span> </a></li>
+  <li><a href="#Data/lineDelimiter" title="https://w3id.org/BIGOWLData/lineDelimiter"> <span>line Delimiter</span> </a></li>
+  <li><a href="#Data/mapping" title="https://w3id.org/BIGOWLData/mapping"> <span>mapping</span> </a></li>
+  <li><a href="#Data/metric" title="https://w3id.org/BIGOWLData/metric"> <span>metric</span> </a></li>
+  <li><a href="#Data/metric_params" title="https://w3id.org/BIGOWLData/metric_params"> <span>metric params</span> </a></li>
+  <li><a href="#Workflows/module" title="https://w3id.org/BIGOWLWorkflows/module"> <span>module</span> </a></li>
+  <li><a href="#Data/n_jobs" title="https://w3id.org/BIGOWLData/n_jobs"> <span>n jobs</span> </a></li>
+  <li><a href="#Data/n_neighbors" title="https://w3id.org/BIGOWLData/n_neighbors"> <span>n neighbors</span> </a></li>
+  <li><a href="#Workflows/numTask" title="https://w3id.org/BIGOWLWorkflows/numTask"> <span>num Task</span> </a></li>
+  <li><a href="#Data/numberOfColumns" title="https://w3id.org/BIGOWLData/numberOfColumns"> <span>number Of Columns</span> </a></li>
+  <li><a href="#Workflows/numberOfInputs" title="https://w3id.org/BIGOWLWorkflows/numberOfInputs"> <span>number Of Inputs</span> </a></li>
+  <li><a href="#Data/numberOfLines" title="https://w3id.org/BIGOWLData/numberOfLines"> <span>number Of Lines</span> </a></li>
+  <li><a href="#Workflows/numberOfOutputs" title="https://w3id.org/BIGOWLWorkflows/numberOfOutputs"> <span>number Of Outputs</span> </a></li>
+  <li><a href="#Workflows/order" title="https://w3id.org/BIGOWLWorkflows/order"> <span>order</span> </a></li>
+  <li><a href="#Data/p" title="https://w3id.org/BIGOWLData/p"> <span>p</span> </a></li>
+  <li><a href="#Data/pathTabularDataSet" title="https://w3id.org/BIGOWLData/pathTabularDataSet"> <span>path Tabular Data Set</span> </a></li>
+  <li><a href="#Workflows/private" title="https://w3id.org/BIGOWLWorkflows/private"> <span>private</span> </a></li>
+  <li><a href="#Data/quoteChar" title="https://w3id.org/BIGOWLData/quoteChar"> <span>quote Char</span> </a></li>
+  <li><a href="#Data/quoting" title="https://w3id.org/BIGOWLData/quoting"> <span>quoting</span> </a></li>
+  <li><a href="#Workflows/range" title="https://w3id.org/BIGOWLWorkflows/range"> <span>range</span> </a></li>
+  <li><a href="#Data/represents" title="https://w3id.org/BIGOWLData/represents"> <span>represents</span> </a></li>
+  <li><a href="#Data/resource" title="https://w3id.org/BIGOWLData/resource"> <span>resource</span> </a></li>
+  <li><a href="#Data/skipInitialSpace" title="https://w3id.org/BIGOWLData/skipInitialSpace"> <span>skip Initial Space</span> </a></li>
+  <li><a href="#Data/skiprows" title="https://w3id.org/BIGOWLData/skiprows"> <span>skiprows</span> </a></li>
+  <li><a href="#Workflows/startedAt" title="https://w3id.org/BIGOWLWorkflows/startedAt"> <span>started At</span> </a></li>
+  <li><a href="#Data/strict" title="https://w3id.org/BIGOWLData/strict"> <span>strict</span> </a></li>
+  <li><a href="#Workflows/version" title="https://w3id.org/BIGOWLWorkflows/version"> <span>version</span> </a></li>
+  <li><a href="#Data/weights" title="https://w3id.org/BIGOWLData/weights"> <span>weights</span> </a></li>
+  <li><a href="#Workflows/workflow" title="https://w3id.org/BIGOWLWorkflows/workflow"> <span>workflow</span> </a></li>
+ </ul>
+ <div class="entity" id="Data/algorithm">
+  <h3>algorithm<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/algorithm</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/className">
+  <h3>class Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/className</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Implementation" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Implementation">Implementation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/classNameSerialized">
+  <h3>class Name Serialized<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/classNameSerialized</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Workflows/Channel" title="https://w3id.org/BIGOWLWorkflows/Channel">Channel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/commentChar">
+  <h3>comment Char<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/commentChar</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/delimiter">
+  <h3>delimiter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/delimiter</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/doubleQuote">
+  <h3>double Quote<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/doubleQuote</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/encoding">
+  <h3>encoding<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/encoding</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/endedAt">
+  <h3>ended At<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/endedAt</p>
+  <div class="comment">
+   <span class="markdown">The time at which an activity ended. See also prov:startedAtTime. http://www.w3.org/ns/prov#endedAtTime</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/escapeChar">
+  <h3>escape Char<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/escapeChar</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/fileFormat">
+  <h3>file Format<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/fileFormat</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Data" target="_blank" title="https://w3id.org/BIGOWLData/Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasColumnName">
+  <h3>has Column Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasColumnName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Column" target="_blank" title="https://w3id.org/BIGOWLData/Column">Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasColumnPosition">
+  <h3>has Column Position<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasColumnPosition</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Cell" target="_blank" title="https://w3id.org/BIGOWLData/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasDataValue">
+  <h3>has Data Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasDataValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasDefaultValue">
+  <h3>has Default Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasDefaultValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasDocumentation">
+  <h3>has Documentation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasDocumentation</p>
+  <div class="comment">
+   <span class="markdown">Property that binds a workflow template to its documentation. http://www.opmw.org/ontology/hasDocumentation</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.opmw.org/ontology/WorkflowTemplate" target="_blank" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Problems/hasFeature">
+  <h3>has Feature<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLProblems/hasFeature</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLProblems/Problem" target="_blank" title="https://w3id.org/BIGOWLProblems/Problem">Problem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasHeader">
+  <h3>has Header<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasHeader</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasListValue">
+  <h3>has List Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasListValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/hasName">
+  <h3>has Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/hasName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasPosition">
+  <h3>has Position<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasPosition</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Column" target="_blank" title="https://w3id.org/BIGOWLData/Column">Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/hasRowPosition">
+  <h3>has Row Position<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/hasRowPosition</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Cell" target="_blank" title="https://w3id.org/BIGOWLData/Cell">Cell</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/implementationLanguage">
+  <h3>implementation Language<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/implementationLanguage</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Implementation" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Implementation">Implementation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/isCorrectWorkflow">
+  <h3>is Correct Workflow<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/isLabel">
+  <h3>is Label<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/isLabel</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLData/Column" target="_blank" title="https://w3id.org/BIGOWLData/Column">Column</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/isObligatory">
+  <h3>is Obligatory<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/isObligatory</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/label">
+  <h3>label<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/label</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/leaf_size">
+  <h3>leaf size<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/leaf_size</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/lineDelimiter">
+  <h3>line Delimiter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/lineDelimiter</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/mapping">
+  <h3>mapping<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/mapping</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/metric">
+  <h3>metric<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/metric</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/metric_params">
+  <h3>metric params<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/metric_params</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/module">
+  <h3>module<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/module</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Implementation" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Implementation">Implementation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/n_jobs">
+  <h3>n jobs<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/n_jobs</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/n_neighbors">
+  <h3>n neighbors<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/n_neighbors</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/numTask">
+  <h3>num Task<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/numTask</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow">Workflow</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/numberOfColumns">
+  <h3>number Of Columns<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/numberOfColumns</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/numberOfInputs">
+  <h3>number Of Inputs<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/numberOfInputs</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/numberOfLines">
+  <h3>number Of Lines<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/numberOfLines</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/numberOfOutputs">
+  <h3>number Of Outputs<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/numberOfOutputs</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/order">
+  <h3>order<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/order</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/p">
+  <h3>p<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/p</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/pathTabularDataSet">
+  <h3>path Tabular Data Set<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/pathTabularDataSet</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/private">
+  <h3>private<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/private</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/quoteChar">
+  <h3>quote Char<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/quoteChar</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/quoting">
+  <h3>quoting<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/quoting</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/range">
+  <h3>range<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/range</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter" target="_blank" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/represents">
+  <h3>represents<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/represents</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/resource">
+  <h3>resource<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/resource</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/skipInitialSpace">
+  <h3>skip Initial Space<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/skipInitialSpace</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/skiprows">
+  <h3>skiprows<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/skiprows</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/startedAt">
+  <h3>started At<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/startedAt</p>
+  <div class="comment">
+   <span class="markdown">The time at which an activity started. See also prov:endedAtTime. http://www.w3.org/ns/prov#startedAtTime</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Task" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/strict">
+  <h3>strict<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/strict</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data/TabularDataSet" title="https://w3id.org/BIGOWLData/TabularDataSet">Tabular Data Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/version">
+  <h3>version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/version</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/BIGOWLWorkflows/Implementation" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Implementation">Implementation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Data/weights">
+  <h3>weights<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/weights</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#KNearestNeighborModel">K Nearest Neighbor Model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Workflows/workflow">
+  <h3>workflow<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLWorkflows/workflow</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLWorkflows/Component" target="_blank" title="https://w3id.org/BIGOWLWorkflows/Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#Data/Boolean" title="https://w3id.org/BIGOWLData/Boolean"> <span>Boolean</span> </a></li>
+  <li><a href="#Data/Date" title="https://w3id.org/BIGOWLData/Date"> <span>Date</span> </a></li>
+  <li><a href="#Data/Double" title="https://w3id.org/BIGOWLData/Double"> <span>Double</span> </a></li>
+  <li><a href="#Data/File" title="https://w3id.org/BIGOWLData/File"> <span>File</span> </a></li>
+  <li><a href="#Data/Float" title="https://w3id.org/BIGOWLData/Float"> <span>Float</span> </a></li>
+  <li><a href="#Data/Folder" title="https://w3id.org/BIGOWLData/Folder"> <span>Folder</span> </a></li>
+  <li><a href="#Data/InputColumn" title="https://w3id.org/BIGOWLData/InputColumn"> <span>Input Column</span> </a></li>
+  <li><a href="#Data/Integer" title="https://w3id.org/BIGOWLData/Integer"> <span>Integer</span> </a></li>
+  <li><a href="#Data/List" title="https://w3id.org/BIGOWLData/List"> <span>List</span> </a></li>
+  <li><a href="#Data/String" title="https://w3id.org/BIGOWLData/String"> <span>String</span> </a></li>
+  <li><a href="#Data/Timestamp" title="https://w3id.org/BIGOWLData/Timestamp"> <span>Timestamp</span> </a></li>
+ </ul>
+ <div class="entity" id="Data/Boolean">
+  <h3>Boolean<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Boolean</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Date">
+  <h3>Date<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Date</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Double">
+  <h3>Double<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Double</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/File">
+  <h3>File<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/File</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/StructuredType" title="https://w3id.org/BIGOWLData/StructuredType">Structured Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Float">
+  <h3>Float<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Float</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Folder">
+  <h3>Folder<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Folder</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/StructuredType" title="https://w3id.org/BIGOWLData/StructuredType">Structured Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/InputColumn">
+  <h3>Input Column<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/InputColumn</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/StructuredType" title="https://w3id.org/BIGOWLData/StructuredType">Structured Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Integer">
+  <h3>Integer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Integer</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/List">
+  <h3>List<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/List</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/StructuredType" title="https://w3id.org/BIGOWLData/StructuredType">Structured Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/String">
+  <h3>String<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/String</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data/Timestamp">
+  <h3>Timestamp<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLData/Timestamp</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Data/PrimitiveType" title="https://w3id.org/BIGOWLData/PrimitiveType">Primitive Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

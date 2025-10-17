@@ -1,0 +1,437 @@
+<https://w3id.org/BIGOWLWorkflows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/BIGOWLWorkflows> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/BIGOWLWorkflows> .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/created> "2022-07-14T09:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/creator> "Khaos Research" .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/description> "This ontology is used tto guide the correct orchestration of a workflow, including elements like tasks, components, parameters, etc. This ontology imports BIGOWLData and BIGOWLAlgorithms to define all the pieces in a workflow." .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/modified> "2025-10-16T13:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/publisher> "Khaos Research" .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/rights> "(c) Khaos Research" .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/dc/terms/title> "BIGOWLWorkflows" .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/vocab/vann/preferredNamespacePrefix> "BIGOWLWorkflows" .
+<https://w3id.org/BIGOWLWorkflows> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/BIGOWLWorkflows" .
+<https://w3id.org/BIGOWLWorkflows> <http://www.w3.org/2000/01/rdf-schema#label> "BIGOWLWorkflows Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/BIGOWLWorkflows/connectedTo
+<https://w3id.org/BIGOWLWorkflows/connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/connectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/connectedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Task> .
+# 
+# https://w3id.org/BIGOWLWorkflows/correspondsToTemplate
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/correspondsToTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opmw.org/ontology/WorkflowTemplate> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasAlgorithm
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/hasAlgorithm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLAlgorithms/Algorithm> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasChannelOutput
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/hasChannelOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Channel> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasComponent
+<https://w3id.org/BIGOWLWorkflows/hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDataType
+<https://w3id.org/BIGOWLWorkflows/hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasDataType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/DataType> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasImplementation
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/hasImplementation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasParameter
+<https://w3id.org/BIGOWLWorkflows/hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasParameter> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasTask
+<https://w3id.org/BIGOWLWorkflows/hasTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/hasTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Task> .
+# 
+# https://w3id.org/BIGOWLWorkflows/instanceParameterOf
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/instanceParameterOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+# 
+# https://w3id.org/BIGOWLWorkflows/isAVersionOf
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/isAVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLWorkflows/Component> .
+# 
+# https://w3id.org/BIGOWLWorkflows/specifiesInputClass
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/specifiesInputClass> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLWorkflows/specifiesOutputClass
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/specifiesOutputClass> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/BIGOWLData/Data> .
+# 
+# https://w3id.org/BIGOWLWorkflows/wasLaunchedBy
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/wasLaunchedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/opmv/ns#Agent> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/BIGOWLWorkflows/className
+<https://w3id.org/BIGOWLWorkflows/className> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/className> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+<https://w3id.org/BIGOWLWorkflows/className> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/classNameSerialized
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Channel> .
+<https://w3id.org/BIGOWLWorkflows/classNameSerialized> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/endedAt
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/BIGOWLWorkflows/endedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which an activity ended. See also prov:startedAtTime.\nhttp://www.w3.org/ns/prov#endedAtTime" .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDataValue
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasDataValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDefaultValue
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasDefaultValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasDocumentation
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opmw.org/ontology/WorkflowTemplate> .
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/BIGOWLWorkflows/hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that binds a workflow template to its documentation.\n\nhttp://www.opmw.org/ontology/hasDocumentation" .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasListValue
+<https://w3id.org/BIGOWLWorkflows/hasListValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasListValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/hasListValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/hasName
+<https://w3id.org/BIGOWLWorkflows/hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/BIGOWLWorkflows/hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/implementationLanguage
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+<https://w3id.org/BIGOWLWorkflows/implementationLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/isCorrectWorkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLWorkflows/isObligatory
+<https://w3id.org/BIGOWLWorkflows/isObligatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/isObligatory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/isObligatory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLWorkflows/module
+<https://w3id.org/BIGOWLWorkflows/module> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/module> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+<https://w3id.org/BIGOWLWorkflows/module> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/numTask
+<https://w3id.org/BIGOWLWorkflows/numTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/numTask> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> .
+<https://w3id.org/BIGOWLWorkflows/numTask> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/numberOfInputs
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/numberOfInputs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/numberOfOutputs
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Task> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/numberOfOutputs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/order
+<https://w3id.org/BIGOWLWorkflows/order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/order> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/BIGOWLWorkflows/private
+<https://w3id.org/BIGOWLWorkflows/private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/private> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/private> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://w3id.org/BIGOWLWorkflows/range
+<https://w3id.org/BIGOWLWorkflows/range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/range> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> .
+<https://w3id.org/BIGOWLWorkflows/range> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/startedAt
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Task> .
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/2000/01/rdf-schema#range> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/BIGOWLWorkflows/startedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which an activity started. See also prov:endedAtTime.\n\nhttp://www.w3.org/ns/prov#startedAtTime" .
+# 
+# https://w3id.org/BIGOWLWorkflows/version
+<https://w3id.org/BIGOWLWorkflows/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/version> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Implementation> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/BIGOWLWorkflows/Component> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/BIGOWLWorkflows/workflow
+<https://w3id.org/BIGOWLWorkflows/workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/BIGOWLWorkflows/workflow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/workflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/opmv/ns#Agent
+<http://purl.org/net/opmv/ns#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow
+<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opmw.org/ontology/WorkflowTemplate
+<http://www.opmw.org/ontology/WorkflowTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLAlgorithms/Algorithm
+<https://w3id.org/BIGOWLAlgorithms/Algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/Data
+<https://w3id.org/BIGOWLData/Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLData/DataType
+<https://w3id.org/BIGOWLData/DataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/BIGOWLWorkflows/Channel
+<https://w3id.org/BIGOWLWorkflows/Channel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Channel> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a topic when a workflow is executed, this class is used for annotating the process of execution" .
+# 
+# https://w3id.org/BIGOWLWorkflows/Component
+<https://w3id.org/BIGOWLWorkflows/Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Component> <http://purl.org/dc/terms/description> "Represents each processing step in the analytic workflow; it encapsulates a concrete functionality with its parameters and I/O"@en .
+<https://w3id.org/BIGOWLWorkflows/Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataAnalysing
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> <http://purl.org/dc/terms/description> "Performs the main algorithmic function of the data analysis."@en .
+<https://w3id.org/BIGOWLWorkflows/DataAnalysing> <http://www.w3.org/2000/01/rdf-schema#label> "Data Analysing"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataCollection
+<https://w3id.org/BIGOWLWorkflows/DataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/DataCollection> <http://purl.org/dc/terms/description> "Connects to data sources and gathers the data required for analysis."@en .
+<https://w3id.org/BIGOWLWorkflows/DataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Data Collection"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataFlow
+<https://w3id.org/BIGOWLWorkflows/DataFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataFlow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/DataFlow> <http://www.w3.org/2000/01/rdf-schema#label> "Data Flow"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataIngestion
+<https://w3id.org/BIGOWLWorkflows/DataIngestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataIngestion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataCollection> .
+<https://w3id.org/BIGOWLWorkflows/DataIngestion> <http://www.w3.org/2000/01/rdf-schema#label> "Data Ingestion"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataMining
+<https://w3id.org/BIGOWLWorkflows/DataMining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataMining> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/MachineLearning> .
+<https://w3id.org/BIGOWLWorkflows/DataMining> <http://www.w3.org/2000/01/rdf-schema#label> "Data Mining"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataProcessing
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> <http://purl.org/dc/terms/description> "Cleans, curates, fuses, and consolidates data prior to the analytic stage."@en .
+<https://w3id.org/BIGOWLWorkflows/DataProcessing> <http://www.w3.org/2000/01/rdf-schema#label> "Data Processing"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataSink
+<https://w3id.org/BIGOWLWorkflows/DataSink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataSink> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Component> .
+<https://w3id.org/BIGOWLWorkflows/DataSink> <http://purl.org/dc/terms/description> "Final step in the data flow; stores and/or visualizes analysis results."@en .
+<https://w3id.org/BIGOWLWorkflows/DataSink> <http://www.w3.org/2000/01/rdf-schema#label> "Data Sink"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/DataTransform
+<https://w3id.org/BIGOWLWorkflows/DataTransform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/DataTransform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+<https://w3id.org/BIGOWLWorkflows/DataTransform> <http://www.w3.org/2000/01/rdf-schema#label> "Data Transform"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/Implementation
+<https://w3id.org/BIGOWLWorkflows/Implementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Implementation> <http://www.w3.org/2000/01/rdf-schema#label> "Implementation"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/MachineLearning
+<https://w3id.org/BIGOWLWorkflows/MachineLearning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/MachineLearning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataAnalysing> .
+<https://w3id.org/BIGOWLWorkflows/MachineLearning> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Learning"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/RemoveOutlier
+<https://w3id.org/BIGOWLWorkflows/RemoveOutlier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/RemoveOutlier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+<https://w3id.org/BIGOWLWorkflows/RemoveOutlier> <http://www.w3.org/2000/01/rdf-schema#label> "Remove Outlier"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/Split
+<https://w3id.org/BIGOWLWorkflows/Split> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Split> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+<https://w3id.org/BIGOWLWorkflows/Split> <http://www.w3.org/2000/01/rdf-schema#label> "Split"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/SplitShuffle
+<https://w3id.org/BIGOWLWorkflows/SplitShuffle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/SplitShuffle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/Split> .
+<https://w3id.org/BIGOWLWorkflows/SplitShuffle> <http://www.w3.org/2000/01/rdf-schema#label> "Split Suffle"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/Task
+<https://w3id.org/BIGOWLWorkflows/Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/Task> <http://purl.org/dc/terms/description> "Executable instance of a Component within a workflow; includes execution order and compatibility between connected tasks."@en .
+<https://w3id.org/BIGOWLWorkflows/Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task"@en .
+# 
+# https://w3id.org/BIGOWLWorkflows/WebService
+<https://w3id.org/BIGOWLWorkflows/WebService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/BIGOWLWorkflows/WebService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/BIGOWLWorkflows/DataProcessing> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

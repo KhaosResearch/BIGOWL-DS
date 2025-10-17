@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>BIGOWLAlgorithms</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/BIGOWLAlgorithms","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/BIGOWLAlgorithms","name":"BIGOWLAlgorithms", "headline":"Document describing the ontology https://w3id.org/BIGOWLAlgorithms", "dateReleased":"2022-07-14T09:00:00", "dateModified":"2025-10-16T13:00:00", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Khaos Research"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>BIGOWLAlgorithms</h1>
+<h2>Release: 2022-07-14T09:00:00</h2>
+
+
+<dl>
+<dt>Modified on: 2025-10-16T13:00:00</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/BIGOWLAlgorithms">https://w3id.org/BIGOWLAlgorithms</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/BIGOWLAlgorithms">https://w3id.org/BIGOWLAlgorithms</a></dd>
+<dt>Authors:</dt>
+<dd>Khaos Research</dd>
+
+<dt>Publisher:</dt>
+<dd>Khaos Research</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-https://opensource.org/licenses/MIT-blue.svg" alt="https://opensource.org/licenses/MIT" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Khaos Research. BIGOWLAlgorithms. Retrieved from: https://w3id.org/BIGOWLAlgorithms</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>BIGOWLAlgorithms</b></td><td>&lt;https://w3id.org/BIGOWLAlgorithms/&gt;</td></tr>
+<tr><td><b>BIGOWLProblems</b></td><td>&lt;https://w3id.org/BIGOWLProblems/&gt;</td></tr>
+<tr><td><b>DMOP</b></td><td>&lt;http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#&gt;</td></tr>
+<tr><td><b>obda</b></td><td>&lt;https://w3id.org/obda/vocabulary#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">BIGOWLAlgorithms Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">
+         <span>Classification Modeling Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ClassificationPredictingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">
+         <span>Classification Predicting Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ClassificationTestingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">
+         <span>Classification Testing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ConvNetLSTM" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM">
+         <span>Conv Net L S T M</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ConvNetLSTMPredict"
+         title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict">
+         <span>Conv Net L S T M Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ConvNetLSTMTesting"
+         title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting">
+         <span>Conv Net L S T M Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DTC" title="https://w3id.org/BIGOWLAlgorithms/DTC">
+         <span>D T C</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DTCPredict" title="https://w3id.org/BIGOWLAlgorithms/DTCPredict">
+         <span>D T C Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DTCTesting" title="https://w3id.org/BIGOWLAlgorithms/DTCTesting">
+         <span>D T C Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DataAnalysingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm">
+         <span>Data Analysing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DataCollectionAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm">
+         <span>Data Collection Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DataFlowAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm">
+         <span>Data Flow Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DataProcessingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm">
+         <span>Data Processing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DataSinkAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm">
+         <span>Data Sink Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/KNN" title="https://w3id.org/BIGOWLAlgorithms/KNN">
+         <span>K N N</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/KNNPredict" title="https://w3id.org/BIGOWLAlgorithms/KNNPredict">
+         <span>K N N Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/KNNTesting" title="https://w3id.org/BIGOWLAlgorithms/KNNTesting">
+         <span>K N N Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">
+         <span>Machine Learning Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"
+         title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">
+         <span>Modeling Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/PredictingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm">
+         <span>Predicting Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RF" title="https://w3id.org/BIGOWLAlgorithms/RF">
+         <span>R F</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RFPredict" title="https://w3id.org/BIGOWLAlgorithms/RFPredict">
+         <span>R F Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RFTesting" title="https://w3id.org/BIGOWLAlgorithms/RFTesting">
+         <span>R F Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SVM" title="https://w3id.org/BIGOWLAlgorithms/SVM">
+         <span>S V M</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SVMPredict" title="https://w3id.org/BIGOWLAlgorithms/SVMPredict">
+         <span>S V M Predict</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SVMTesting" title="https://w3id.org/BIGOWLAlgorithms/SVMTesting">
+         <span>S V M Testing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TestingAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm">
+         <span>Testing Algorithm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/WebServiceAlgorithm"
+         title="https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm">
+         <span>Web Service Algorithm</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/solves" title="https://w3id.org/BIGOWLAlgorithms/solves">
+         <span>solves</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">BIGOWLAlgorithms Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This ontology covers all possible kinds. It has two main subclasses: DataMiningAlgorithm and OptimizationAlgorithm, which are used to distinguish between these two families of algorithms. The former is included in the form of equivalence with the class DM-Algorithm, which is linked from DMOP.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for BIGOWLAlgorithms Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by BIGOWLAlgorithms Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm"> <span>Classification Modeling Algorithm</span> </a></li>
+  <li><a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm"> <span>Classification Predicting Algorithm</span> </a></li>
+  <li><a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm"> <span>Classification Testing Algorithm</span> </a></li>
+  <li><a href="#/ConvNetLSTM" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM"> <span>Conv Net L S T M</span> </a></li>
+  <li><a href="#/ConvNetLSTMPredict" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict"> <span>Conv Net L S T M Predict</span> </a></li>
+  <li><a href="#/ConvNetLSTMTesting" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting"> <span>Conv Net L S T M Testing</span> </a></li>
+  <li><a href="#/DTC" title="https://w3id.org/BIGOWLAlgorithms/DTC"> <span>D T C</span> </a></li>
+  <li><a href="#/DTCPredict" title="https://w3id.org/BIGOWLAlgorithms/DTCPredict"> <span>D T C Predict</span> </a></li>
+  <li><a href="#/DTCTesting" title="https://w3id.org/BIGOWLAlgorithms/DTCTesting"> <span>D T C Testing</span> </a></li>
+  <li><a href="#/DataAnalysingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm"> <span>Data Analysing Algorithm</span> </a></li>
+  <li><a href="#/DataCollectionAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm"> <span>Data Collection Algorithm</span> </a></li>
+  <li><a href="#/DataFlowAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm"> <span>Data Flow Algorithm</span> </a></li>
+  <li><a href="#/DataProcessingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm"> <span>Data Processing Algorithm</span> </a></li>
+  <li><a href="#/DataSinkAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm"> <span>Data Sink Algorithm</span> </a></li>
+  <li><a href="#/KNN" title="https://w3id.org/BIGOWLAlgorithms/KNN"> <span>K N N</span> </a></li>
+  <li><a href="#/KNNPredict" title="https://w3id.org/BIGOWLAlgorithms/KNNPredict"> <span>K N N Predict</span> </a></li>
+  <li><a href="#/KNNTesting" title="https://w3id.org/BIGOWLAlgorithms/KNNTesting"> <span>K N N Testing</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm"> <span>Machine Learning Algorithm</span> </a></li>
+  <li><a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm"> <span>Modeling Algorithm</span> </a></li>
+  <li><a href="#/PredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm"> <span>Predicting Algorithm</span> </a></li>
+  <li><a href="#/RF" title="https://w3id.org/BIGOWLAlgorithms/RF"> <span>R F</span> </a></li>
+  <li><a href="#/RFPredict" title="https://w3id.org/BIGOWLAlgorithms/RFPredict"> <span>R F Predict</span> </a></li>
+  <li><a href="#/RFTesting" title="https://w3id.org/BIGOWLAlgorithms/RFTesting"> <span>R F Testing</span> </a></li>
+  <li><a href="#/SVM" title="https://w3id.org/BIGOWLAlgorithms/SVM"> <span>S V M</span> </a></li>
+  <li><a href="#/SVMPredict" title="https://w3id.org/BIGOWLAlgorithms/SVMPredict"> <span>S V M Predict</span> </a></li>
+  <li><a href="#/SVMTesting" title="https://w3id.org/BIGOWLAlgorithms/SVMTesting"> <span>S V M Testing</span> </a></li>
+  <li><a href="#/TestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm"> <span>Testing Algorithm</span> </a></li>
+  <li><a href="#/WebServiceAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm"> <span>Web Service Algorithm</span> </a></li>
+ </ul>
+ <div class="entity" id="/Algorithm">
+  <h3>Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/Algorithm</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/DataAnalysingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm">Data Analysing Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#/DataCollectionAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm">Data Collection Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#/DataFlowAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm">Data Flow Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#/DataProcessingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm">Data Processing Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#/DataSinkAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm">Data Sink Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/solves" title="https://w3id.org/BIGOWLAlgorithms/solves">solves</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">
+  <h3>Classification Modeling Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/ConvNetLSTM" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM">Conv Net L S T M</a> <sup class="type-c" title="class">c</sup>, <a href="#/DTC" title="https://w3id.org/BIGOWLAlgorithms/DTC">D T C</a> <sup class="type-c" title="class">c</sup>, <a href="#/KNN" title="https://w3id.org/BIGOWLAlgorithms/KNN">K N N</a> <sup class="type-c" title="class">c</sup>, <a href="#/RF" title="https://w3id.org/BIGOWLAlgorithms/RF">R F</a> <sup class="type-c" title="class">c</sup>, <a href="#/SVM" title="https://w3id.org/BIGOWLAlgorithms/SVM">S V M</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ClassificationPredictingAlgorithm">
+  <h3>Classification Predicting Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/PredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm">Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/ConvNetLSTMPredict" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict">Conv Net L S T M Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#/DTCPredict" title="https://w3id.org/BIGOWLAlgorithms/DTCPredict">D T C Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#/KNNPredict" title="https://w3id.org/BIGOWLAlgorithms/KNNPredict">K N N Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#/RFPredict" title="https://w3id.org/BIGOWLAlgorithms/RFPredict">R F Predict</a> <sup class="type-c" title="class">c</sup>, <a href="#/SVMPredict" title="https://w3id.org/BIGOWLAlgorithms/SVMPredict">S V M Predict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ClassificationTestingAlgorithm">
+  <h3>Classification Testing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/TestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm">Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/ConvNetLSTMTesting" title="https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting">Conv Net L S T M Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#/DTCTesting" title="https://w3id.org/BIGOWLAlgorithms/DTCTesting">D T C Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#/KNNTesting" title="https://w3id.org/BIGOWLAlgorithms/KNNTesting">K N N Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#/RFTesting" title="https://w3id.org/BIGOWLAlgorithms/RFTesting">R F Testing</a> <sup class="type-c" title="class">c</sup>, <a href="#/SVMTesting" title="https://w3id.org/BIGOWLAlgorithms/SVMTesting">S V M Testing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ConvNetLSTM">
+  <h3>Conv Net L S T M<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ConvNetLSTM</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ConvNetLSTMPredict">
+  <h3>Conv Net L S T M Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ConvNetLSTMTesting">
+  <h3>Conv Net L S T M Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/ConvNetLSTMTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DTC">
+  <h3>D T C<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DTC</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DTCPredict">
+  <h3>D T C Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DTCPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DTCTesting">
+  <h3>D T C Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DTCTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DataAnalysingAlgorithm">
+  <h3>Data Analysing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DataCollectionAlgorithm">
+  <h3>Data Collection Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataCollectionAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DataFlowAlgorithm">
+  <h3>Data Flow Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataFlowAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DataProcessingAlgorithm">
+  <h3>Data Processing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/WebServiceAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm">Web Service Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/DataSinkAlgorithm">
+  <h3>Data Sink Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/DataSinkAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/KNN">
+  <h3>K N N<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/KNN</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/KNNPredict">
+  <h3>K N N Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/KNNPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/KNNTesting">
+  <h3>K N N Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/KNNTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">
+  <h3>Machine Learning Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/DataAnalysingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataAnalysingAlgorithm">Data Analysing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#/PredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm">Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>, <a href="#/TestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm">Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm">
+  <h3>Modeling Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ModelingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/PredictingAlgorithm">
+  <h3>Predicting Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/PredictingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RF">
+  <h3>R F<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/RF</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RFPredict">
+  <h3>R F Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/RFPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RFTesting">
+  <h3>R F Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/RFTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/SVM">
+  <h3>S V M<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/SVM</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ClassificationModelingAlgorithm">Classification Modeling Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/SVMPredict">
+  <h3>S V M Predict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/SVMPredict</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationPredictingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationPredictingAlgorithm">Classification Predicting Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/SVMTesting">
+  <h3>S V M Testing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/SVMTesting</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/TestingAlgorithm">
+  <h3>Testing Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/TestingAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm" title="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#MachineLearningAlgorithm">Machine Learning Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/ClassificationTestingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/ClassificationTestingAlgorithm">Classification Testing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/WebServiceAlgorithm">
+  <h3>Web Service Algorithm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/WebServiceAlgorithm</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/DataProcessingAlgorithm" title="https://w3id.org/BIGOWLAlgorithms/DataProcessingAlgorithm">Data Processing Algorithm</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/solves" title="https://w3id.org/BIGOWLAlgorithms/solves"> <span>solves</span> </a></li>
+ </ul>
+ <div class="entity" id="/solves">
+  <h3>solves<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/BIGOWLAlgorithms/solves</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Algorithm" title="https://w3id.org/BIGOWLAlgorithms/Algorithm">Algorithm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/BIGOWLProblems/Problem" target="_blank" title="https://w3id.org/BIGOWLProblems/Problem">Problem</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights"> <span>rights</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/rights">
+  <h3>rights<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/rights</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
